@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_base_coaches",
+  "info": {
+    "name": "Coach",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Role": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Fact": {
+      "type": "richtext"
+    }
+  }
+}
