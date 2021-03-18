@@ -1,9 +1,8 @@
 import React from "react"
-import styled from "styled-components"
 
 const Social = () => {
   return (
-    <div class="flex flex-row justify-center items-center">
+    <div className="flex flex-row justify-center items-center">
       <a
         className="p-2"
         target="_blank"
