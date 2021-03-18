@@ -1,6 +1,5 @@
 import React from "react"
 import CTA from "../components/CTA"
-import Grid from "../components/Grid"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import ProgramList from "../components/ProgramList"
