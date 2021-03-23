@@ -87,14 +87,14 @@ const Header = () => {
       </nav>
       {mobileOpen && (
         <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-            <div className="pt-5 pb-6 px-5">
+          <div className="rounded-lg shadow-lg ring-2 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            <div className="pt-4 pl-2 pr-3 pb-3">
               <div className="flex items-center justify-between">
                 <div>
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
+                    src={logo}
+                    alt="North Endurance Logo"
                   />
                 </div>
                 <div className="-mr-2">
@@ -123,39 +123,39 @@ const Header = () => {
                 </div>
               </div>
               <div className="mt-6">
-                <nav className="grid gap-y-8">
+                <nav className="grid gap-y-2">
                   <Link
                     to="/about"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                    className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                   >
-                    <span className="ml-3 text-base font-medium text-gray-900">
+                    <span className="ml-1 text-base font-medium text-gray-900">
                       About
                   </span>
                   </Link>
 
                   <Link
                     to="/programs"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                    className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                   >
-                    <span className="ml-3 text-base font-medium text-gray-900">
+                    <span className="ml-1 text-base font-medium text-gray-900">
                       Programs
                   </span>
                   </Link>
 
                   <Link
                     to="/schedule"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                    className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                   >
-                    <span className="ml-3 text-base font-medium text-gray-900">
+                    <span className="ml-1 text-base font-medium text-gray-900">
                       Schedule
                   </span>
                   </Link>
 
                   <Link
                     to="/faq"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                    className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                   >
-                    <span className="ml-3 text-base font-medium text-gray-900">
+                    <span className="ml-1 text-base font-medium text-gray-900">
                       FAQ
                   </span>
                   </Link>
@@ -164,9 +164,9 @@ const Header = () => {
                     href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"
                     target="_blank"
                     rel="noreferrer"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                    className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                   >
-                    <span className="ml-3 text-base font-medium text-gray-900">
+                    <span className="ml-1 text-base font-medium text-gray-900">
                       ZenPlanner
                   </span>
                   </a>
