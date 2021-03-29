@@ -10,7 +10,7 @@ const Crossfit = () => {
     <div className="flex flex-row	justify-center items-center">
       <CrossfitImage
         className="my-2"
-        style={{ maxWidth: "80px", height: "100%" }}
+        style={{ maxWidth: "100px" }}
         src={CFL1}
         alt="CrossFit Journal"
       />

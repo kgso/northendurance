@@ -10,7 +10,7 @@ const ProgramList = () => {
   return (
     <div className="my-10">
       <div className="flex items-center shadow ring-1 ring-blue-100 sm:rounded-md p-4 my-4">
-        <img className="w-1/3 h-full" src={yoga} />
+        <img className="w-1/3 h-full" src={yoga} alt="Yoga" />
         <div className="w-2/3 m-10">
           <h2 className="text-base text-blue-500 font-semibold tracking-wide uppercase my-1.5">
             Yoga
@@ -21,7 +21,7 @@ const ProgramList = () => {
         </div>
       </div>
       <div className="flex items-center shadow ring-1 ring-yellow-100 sm:rounded-md p-4 my-4">
-        <img className="w-1/3 h-full" src={weightlifting} />
+        <img className="w-1/3 h-full" src={weightlifting} alt="Weightlifting" />
         <div className="w-2/3 m-10">
           <h2 className="text-base text-yellow-500 font-semibold tracking-wide uppercase my-1.5">
             Weightlifting
@@ -32,7 +32,7 @@ const ProgramList = () => {
         </div>
       </div>
       <div className="flex items-center shadow ring-1 ring-green-100 sm:rounded-md p-4 my-4">
-        <img className="w-1/3 h-full" src={rightStart} />
+        <img className="w-1/3 h-full" src={rightStart} alt="Right Start" />
         <div className="w-2/3 m-10">
           <h2 className="text-base text-green-500 font-semibold tracking-wide uppercase my-1.5">
             Right Start
@@ -43,7 +43,7 @@ const ProgramList = () => {
         </div>
       </div>
       <div className="flex items-center shadow ring-1 ring-red-100 sm:rounded-md p-4 my-4">
-        <img className="w-1/3 h-full" src={crossfit} />
+        <img className="w-1/3 h-full" src={crossfit} alt="CrossFit" />
         <div className="w-2/3 m-10">
           <h2 className="text-base text-red-500 font-semibold tracking-wide uppercase my-1.5">
             CrossFit
@@ -54,7 +54,7 @@ const ProgramList = () => {
         </div>
       </div>
       <div className="flex items-center shadow ring-1 ring-purple-100 sm:rounded-md p-4 my-4">
-        <img className="w-1/3 h-full" src={compPrep} />
+        <img className="w-1/3 h-full" src={compPrep} alt="Competition Prep" />
         <div className="w-2/3 m-10">
           <h2 className="text-base text-purple-500 font-semibold tracking-wide uppercase my-1.5">
             Competition Prep
