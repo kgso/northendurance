@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   pathPrefix: "/pizza",
   siteMetadata: {
@@ -9,7 +11,13 @@ module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-postcss",
-    "gatsby-plugin-image",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `assets`, `images`),
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
   ],
