@@ -11,7 +11,7 @@ const Programs = () => {
       <SEO title="Programs | North Endurance" />
       <Hero />
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8">
-        <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">
+        <h2 className="text-base text-red-600 font-semibold tracking-wide uppercase">
           Programs
         </h2>
         <ProgramList />
