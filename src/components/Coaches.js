@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 import coaches from "../assets/data/coaches.js"
 
@@ -17,10 +18,10 @@ const Coaches = () => {
             <figure>
               <div class="relative rounded overflow-hidden transition transform duration-150 ease-in-out">
                 {coach.image && (
-                  <img
-                    class="w-full h-auto"
-                    src={coach.image}
+                  <StaticImage
+                    src={coach.iamge}
                     alt={coach.name}
+                    class="w-full h-auto"
                   />
                 )}
                 <div class="absolute inset-0 flex items-center justify-center text-center rounded-md opacity-15 transition ease-in-out duration-150"></div>

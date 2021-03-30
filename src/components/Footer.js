@@ -3,6 +3,9 @@ import Logo from "./Logo"
 import Social from "./Social"
 import Crossfit from "./Crossfit"
 
+import pin from "../assets/images/icons/pin.svg"
+import phone from "../assets/images/icons/phone.svg"
+
 const Footer = () => {
   return (
     <footer>
@@ -15,7 +18,26 @@ const Footer = () => {
             <div className="w-auto m-auto">
               <h3 className="text-2xl py-4">Location & Hours</h3>
               <ul>
-                <li className="text-sm">5687 West St Halifax, NS B3K 1H6</li>
+                <a
+                  href="https://www.google.com/maps/place/5687+West+St,+Halifax,+NS+B3K+1H6/data=!4m2!3m1!1s0x4b5a217e388c53c7:0xf807ed041023fea2?sa=X&ved=2ahUKEwiskKjDhdbvAhXPRTABHU5zApoQ8gEwAHoECAYQAQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-row"
+                >
+                  <img src={pin} className="" />
+                  <li className="text-sm margin ml-3">
+                    5687 West St Halifax, NS B3K 1H6
+                  </li>
+                </a>
+                <a
+                  href="tel:9024819516"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-row"
+                >
+                  <img src={phone} />
+                  <li className="text-sm  ml-3">902-481-9516</li>
+                </a>
                 <li className="text-sm">Mon - Fri: 6:00 AM - 8:45 PM</li>
                 <li className="text-sm">Sat & Sun: 9:00 AM - 2:00 PM</li>
               </ul>

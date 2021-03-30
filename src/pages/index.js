@@ -5,10 +5,12 @@ import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 
 import photo from "../assets/images/shots/group_shot-1024x398.jpg"
+import SEO from "../components/SEO"
 
 const Home = () => {
   return (
     <Layout>
+      <SEO title="Home | North Endurance" />
       <Hero />
       <div
         style={{
