@@ -14,7 +14,7 @@ const About = () => {
       <SEO title="About | North Endurance" />
       <Hero />
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8">
-        <h2 class="text-base text-yellow-600 font-semibold tracking-wide uppercase">
+        <h2 className="text-base text-yellow-600 font-semibold tracking-wide uppercase">
           About North Endurance
         </h2>
         <Coaches />
