@@ -12,19 +12,20 @@ const CTA = () => {
         </h2>
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
-            <button
+            <a
               className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:text-gray-500"
+              href="mailto:info@northendurance.ca"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Get started
-            </button>
+            </a>
           </div>
-          <div className="ml-3 inline-flex rounded-md shadow">
-            <button
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:text-gray-500"
-            >
+          {/* <div className="ml-3 inline-flex rounded-md shadow">
+            <a href="#" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:text-gray-500">
               Learn more
-            </button>
-          </div>
+            </a>
+          </div> */}
         </div>
       </div>
     </div>

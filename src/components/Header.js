@@ -15,7 +15,11 @@ const Header = () => {
         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link to="/">
-              <img className="h-8 w-auto sm:h-10" src={logo} alt="North Endurance Logo" />
+              <img
+                className="h-8 w-auto sm:h-10"
+                src={logo}
+                alt="North Endurance Logo"
+              />
             </Link>
             <div className="-mr-2 flex items-center md:hidden">
               <button
@@ -45,37 +49,35 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div
-          className="hidden md:block md:ml-10 md:pr-4 md:space-x-8"
-        >
+        <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
           <Link
             to="/about"
             className="font-medium text-gray-500 hover:text-gray-900"
           >
             About
-            </Link>
+          </Link>
           <Link
             to="/programs"
             className="font-medium text-gray-500 hover:text-gray-900"
           >
             Programs
-            </Link>
+          </Link>
           <Link
             to="/schedule"
             className="font-medium text-gray-500 hover:text-gray-900"
           >
             Schedule
-            </Link>
+          </Link>
           <Link
             to="/faq"
             className="font-medium text-gray-500 hover:text-gray-900"
           >
             FAQ
-            </Link>
+          </Link>
           <a
             href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <img
               className="h-8 w-auto inline"
@@ -130,7 +132,7 @@ const Header = () => {
                   >
                     <span className="ml-1 text-base font-medium text-gray-900">
                       About
-                  </span>
+                    </span>
                   </Link>
 
                   <Link
@@ -139,7 +141,7 @@ const Header = () => {
                   >
                     <span className="ml-1 text-base font-medium text-gray-900">
                       Programs
-                  </span>
+                    </span>
                   </Link>
 
                   <Link
@@ -148,7 +150,7 @@ const Header = () => {
                   >
                     <span className="ml-1 text-base font-medium text-gray-900">
                       Schedule
-                  </span>
+                    </span>
                   </Link>
 
                   <Link
@@ -157,18 +159,18 @@ const Header = () => {
                   >
                     <span className="ml-1 text-base font-medium text-gray-900">
                       FAQ
-                  </span>
+                    </span>
                   </Link>
 
                   <a
                     href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                   >
                     <span className="ml-1 text-base font-medium text-gray-900">
                       ZenPlanner
-                  </span>
+                    </span>
                   </a>
                 </nav>
               </div>

@@ -1,28 +1,35 @@
 import React from "react"
+import Img from 'gatsby-image'
 import CTA from "../components/CTA"
 import Grid from "../components/Grid"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 
-import photo from "../assets/images/shots/group_shot-1024x398.jpg"
+import SEO from "../components/SEO"
 
-const Home = () => {
+
+const Home = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Home | North Endurance" />
       <Hero />
-      <div
-        style={{
-          backgroundImage: `linear-gradient(rgba(253, 230, 138, 0.3), rgba(248, 113, 113, 0.4)), url(${photo})`,
-          backgroundRepeat: "no-repeat",
-          height: "400px",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      ></div>
+      <Img fluid={data.file.childImageSharp.fluid} />
       <Grid />
       <CTA />
     </Layout>
   )
 }
+
+export const HomePageQuery = graphql`
+  query {
+    file(relativePath: { eq: "shots/group_shot-1024x398.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1280, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default Home
