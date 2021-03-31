@@ -24,7 +24,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex flex-row"
                 >
-                  <img src={pin} className="" />
+                  <img src={pin} alt="location icon" />
                   <li className="text-sm margin ml-3">
                     5687 West St Halifax, NS B3K 1H6
                   </li>
@@ -35,7 +35,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex flex-row"
                 >
-                  <img src={phone} />
+                  <img src={phone} alt="phone icon" />
                   <li className="text-sm  ml-3">902-481-9516</li>
                 </a>
                 <li className="text-sm">Mon - Fri: 6:00 AM - 8:45 PM</li>
