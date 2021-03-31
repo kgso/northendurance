@@ -21,11 +21,11 @@ const CTA = () => {
               Get started
             </a>
           </div>
-          <div className="ml-3 inline-flex rounded-md shadow">
-            <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:text-gray-500">
+          {/* <div className="ml-3 inline-flex rounded-md shadow">
+            <a href="#" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:text-gray-500">
               Learn more
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
