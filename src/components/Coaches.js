@@ -1,40 +1,40 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import Img from 'gatsby-image';
+import Img from "gatsby-image"
 
 import coaches from "../assets/data/coaches.js"
 
 const coachImageQuery = graphql`
   query {
-    adam: file(relativePath: { eq: "coaches/adam.jpg"}) {
-      childImageSharp {
-        fluid(maxWidth: 275, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    },
-    charles: file(relativePath: { eq: "coaches/charles.jpg"}) {
-      childImageSharp {
-        fluid(maxWidth: 275, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    },
-    boo: file(relativePath: { eq: "coaches/boo.jpg"}) {
+    adam: file(relativePath: { eq: "coaches/adam.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 275, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    erinn: file(relativePath: { eq: "coaches/erinn.jpg"}) {
+    charles: file(relativePath: { eq: "coaches/charles.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 275, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
-    },
-    kim: file(relativePath: { eq: "coaches/kim.jpg"}) {
+    }
+    boo: file(relativePath: { eq: "coaches/boo.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 275, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    erinn: file(relativePath: { eq: "coaches/erinn.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 275, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    kim: file(relativePath: { eq: "coaches/kim.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 275, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -46,10 +46,8 @@ const coachImageQuery = graphql`
 
 const Coaches = () => {
   return (
-    <StaticQuery
-      query={coachImageQuery}
-    >
-      {data =>
+    <StaticQuery query={coachImageQuery}>
+      {data => (
         <div className="my-10">
           <div
             id="product-marketing-sections"
@@ -57,7 +55,7 @@ const Coaches = () => {
           >
             <h2 className="text-base text-red-600 font-semibold tracking-wide uppercase">
               Coaches
-        </h2>
+            </h2>
             <div className="grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-6 md:grid-cols-4 lg:col-span-4">
               {coaches.map(coach => (
                 <figure>
@@ -74,7 +72,9 @@ const Coaches = () => {
                   </div>
                   <figcaption className="mt-3">
                     {coach.name && (
-                      <p className="text-sm font-bold text-yellow-500">{coach.name}</p>
+                      <p className="text-sm font-bold text-yellow-500">
+                        {coach.name}
+                      </p>
                     )}
                     {coach.role && (
                       <p className="text-sm font-medium text-yellow-700">
@@ -82,7 +82,9 @@ const Coaches = () => {
                       </p>
                     )}
                     {coach.qualifications && (
-                      <p className="text-sm text-red-900">{coach.qualifications}</p>
+                      <p className="text-sm text-red-900">
+                        {coach.qualifications}
+                      </p>
                     )}
                   </figcaption>
                 </figure>
@@ -90,7 +92,7 @@ const Coaches = () => {
             </div>
           </div>
         </div>
-      }
+      )}
     </StaticQuery>
   )
 }

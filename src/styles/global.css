@@ -5,3 +5,9 @@
 svg.icon:hover {
   fill: yellow;
 }
+
+@font-face {
+  font-family: LogoFont;
+  src: url("../assets/fonts/againts.ttf") format("truetype");
+  /* url("../assets/fonts/againts.otf") format("opentype"); */
+}
