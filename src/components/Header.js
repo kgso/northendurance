@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import logo from "../assets/images/logos/northEndurancezlogo.png"
+import logo from "../assets/images/logos/homeLogo.png"
 import zenplanner from "../assets/images/logos/zenplannerlogo.png"
 
 const Header = () => {
@@ -50,6 +50,14 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+          <a
+            href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-gray-500 hover:text-gray-900"
+          >
+            Today's WOD
+          </a>
           <Link
             to="/about"
             className="font-medium text-gray-500 hover:text-gray-900"
@@ -68,12 +76,12 @@ const Header = () => {
           >
             Schedule
           </Link>
-          <Link
+          {/* <Link
             to="/faq"
             className="font-medium text-gray-500 hover:text-gray-900"
           >
             FAQ
-          </Link>
+          </Link> */}
           <a
             href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"
             target="_blank"
