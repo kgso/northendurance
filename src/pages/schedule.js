@@ -1,19 +1,16 @@
 import React from "react"
 import CTA from "../components/CTA"
 import Grid from "../components/Grid"
-import Hero from "../components/Hero"
 import Layout from "../components/Layout"
+import PageHero from "../components/PageHero"
 import SEO from "../components/SEO"
 
 const Schedule = () => {
   return (
     <Layout>
       <SEO title="Schedule | North Endurance" />
-      <Hero />
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8">
-        <h2 class="text-base text-yellow-600 font-semibold tracking-wide uppercase">
-          Schedule
-        </h2>
+        <PageHero title="Schedule" />
         <div className="my-4">
           <iframe
             id="idZenPlannerFrame"
