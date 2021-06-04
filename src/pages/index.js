@@ -6,6 +6,7 @@ import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 
 import SEO from "../components/SEO"
+import SafetyNotice from "../components/SafetyNotice"
 
 const Home = ({ data }) => {
   return (
@@ -13,6 +14,7 @@ const Home = ({ data }) => {
       <SEO title="Home | North Endurance" />
       <Hero />
       <Img fluid={data.file.childImageSharp.fluid} />
+      <SafetyNotice />
       <CTA />
     </Layout>
   )

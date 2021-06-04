@@ -50,30 +50,53 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+          <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8 z-50">
             <a
               href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-gray-500 hover:text-gray-900"
+              className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-wide relative"
             >
-              Today's WOD
+              TODAY'S WOD
             </a>
-            <Link
-              to="/about"
-              className="font-medium text-gray-500 hover:text-gray-900"
-            >
-              About
-            </Link>
+            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide">
+              <a>About</a>
+              <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60">
+                <Link
+                  to="/schedule"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  Schedule
+                </Link>
+                <Link
+                  to="/our-story"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  Our Story
+                </Link>
+                <Link
+                  to="/team"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  Meet Our Team
+                </Link>
+                <Link
+                  to="/inclusion"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  Inclusion
+                </Link>
+              </div>
+            </li>
             <Link
               to="/programs"
-              className="font-medium text-gray-500 hover:text-gray-900"
+              className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-wide relative"
             >
               Programs
             </Link>
             <Link
               to="/contact"
-              className="font-medium text-gray-500 hover:text-gray-900"
+              className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-wide relative"
             >
               Contact
             </Link>
@@ -92,17 +115,17 @@ const Header = () => {
           </div>
         </nav>
         {mobileOpen && (
-          <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-            <div className="rounded-lg shadow-lg ring-1 ring-red ring-opacity-5 bg-white divide-y-2">
+          <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-10">
+            <div className="rounded-lg shadow-lg ring-1 ring-red-700 ring-opacity-5 bg-white divide-y-2">
               <div className="pt-4 pl-2 pr-3 pb-3">
                 <div className="flex items-center justify-between">
-                  <div>
+                  <Link to="/">
                     <img
                       className="h-8 w-auto"
                       src={logo}
                       alt="North Endurance Logo"
                     />
-                  </div>
+                  </Link>
                   <div className="-mr-2">
                     <button
                       onClick={() => setMobileOpen(!mobileOpen)}
@@ -136,25 +159,54 @@ const Header = () => {
                       rel="noopener noreferrer"
                       className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                     >
-                      <span className="ml-1 text-base font-medium text-gray-900">
+                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2">
                         Today's WOD
                       </span>
                     </a>
 
-                    <Link
-                      to="/about"
-                      className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                    >
-                      <span className="ml-1 text-base font-medium text-gray-900">
-                        About
-                      </span>
-                    </Link>
+                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4">
+                      <a>About</a>
+                      <div className="top-4 h-auto flex flex-col pt-4">
+                        <Link
+                          to="/schedule"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            Schedule
+                          </span>
+                        </Link>
+                        <Link
+                          to="/our-story"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            Our Story
+                          </span>
+                        </Link>
+                        <Link
+                          to="/team"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            Meet Our Team
+                          </span>
+                        </Link>
+                        <Link
+                          to="/inclusion"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            Inclusion
+                          </span>
+                        </Link>
+                      </div>
+                    </li>
 
                     <Link
                       to="/programs"
                       className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                     >
-                      <span className="ml-1 text-base font-medium text-gray-900">
+                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2">
                         Programs
                       </span>
                     </Link>
@@ -163,7 +215,7 @@ const Header = () => {
                       to="/contact"
                       className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                     >
-                      <span className="ml-1 text-base font-medium text-gray-900">
+                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2">
                         Contact
                       </span>
                     </Link>
@@ -174,7 +226,7 @@ const Header = () => {
                       rel="noopener noreferrer"
                       className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                     >
-                      <span className="ml-1 text-base font-medium text-gray-900">
+                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2">
                         ZenPlanner
                       </span>
                     </a>

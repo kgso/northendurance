@@ -21,8 +21,6 @@ const Schedule = () => {
           ></iframe>
           <script src="https://crossfitkineticsca.zenplanner.com/zenplanner/skin/js/resize.js"></script>
         </div>
-        <Grid />
-        <CTA />
       </div>
     </Layout>
   )
