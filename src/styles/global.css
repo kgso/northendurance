@@ -11,3 +11,7 @@ svg.icon:hover {
   src: url("../assets/fonts/againts.ttf") format("truetype");
   /* url("../assets/fonts/againts.otf") format("opentype"); */
 }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

@@ -9,7 +9,7 @@ import phone from "../assets/images/icons/phone.svg"
 const Footer = () => {
   return (
     <footer>
-      <div className="flex flex-wrap justify-center bg-gray-900 p-6 text-white">
+      <div className="flex flex-wrap justify-center bg-gray-900 p-6 text-white mt-12">
         <div className="flex flex-wrap mb-4 w-full">
           <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 justify-center items-center flex">
             <Logo></Logo>
