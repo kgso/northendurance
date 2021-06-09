@@ -17,7 +17,7 @@ const Header = () => {
             <div className="flex items-center justify-between w-full md:w-auto">
               <Link to="/">
                 <img
-                  className="h-8 w-auto sm:h-10"
+                  className="h-8 w-auto"
                   src={logo}
                   alt="North Endurance Logo"
                 />
@@ -61,7 +61,7 @@ const Header = () => {
             </a>
             <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide">
               <a>About</a>
-              <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60">
+              <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60 z-10">
                 <Link
                   to="/schedule"
                   className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
@@ -88,18 +88,69 @@ const Header = () => {
                 </Link>
               </div>
             </li>
-            <Link
-              to="/programs"
-              className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-wide relative"
-            >
-              Programs
-            </Link>
-            <Link
-              to="/contact"
-              className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-wide relative"
-            >
-              Contact
-            </Link>
+            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide">
+              <a>
+                <a>Programs</a>
+              </a>
+              <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-80 z-10">
+                <Link
+                  to="/programs#west-street-crossfit"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  West Street CrossFit
+                </Link>
+                <Link
+                  to="/programs#personal-training"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  Personal Training
+                </Link>
+                <Link
+                  to="/programs#introduction-to-crossfit"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  Introduction to CrossFit
+                </Link>
+                <Link
+                  to="/programs#wscf-lite"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  WSCF Lite
+                </Link>
+                <Link
+                  to="/programs#corporate-opportunities"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  Corporate Opportunities
+                </Link>
+                <Link
+                  to="/programs#virtual-classes"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  Virtual Classes
+                </Link>
+              </div>
+            </li>
+
+            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide">
+              <a>
+                <a>Contact</a>
+              </a>
+              <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60 z-10">
+                <Link
+                  to="/contact"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  to="/support-local"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                >
+                  #SupportLocal
+                </Link>
+              </div>
+            </li>
 
             <a
               href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"
@@ -202,23 +253,81 @@ const Header = () => {
                       </div>
                     </li>
 
-                    <Link
-                      to="/programs"
-                      className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                    >
-                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2">
-                        Programs
-                      </span>
-                    </Link>
+                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4">
+                      <a>Programs</a>
+                      <div className="top-4 h-auto flex flex-col pt-4">
+                        <Link
+                          to="/programs#west-street-crossfit"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            West Street CrossFit
+                          </span>
+                        </Link>
+                        <Link
+                          to="/programs#personal-training"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            Personal Training
+                          </span>
+                        </Link>
+                        <Link
+                          to="/programs#introduction-to-crossfit"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            Introduction to CrossFit
+                          </span>
+                        </Link>
+                        <Link
+                          to="/programs#wscf-lite"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            WSCF Lite
+                          </span>
+                        </Link>
+                        <Link
+                          to="/programs#corporate-opportunities"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            Corporate Opportunities
+                          </span>
+                        </Link>
+                        <Link
+                          to="/programs#virtual-classes"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            Virtual Classes
+                          </span>
+                        </Link>
+                      </div>
+                    </li>
 
-                    <Link
-                      to="/contact"
-                      className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                    >
-                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2">
-                        Contact
-                      </span>
-                    </Link>
+                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4">
+                      <a>Contact</a>
+                      <div className="top-4 h-auto flex flex-col pt-4">
+                        <Link
+                          to="/contact"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            Contact Us
+                          </span>
+                        </Link>
+                        <Link
+                          to="/support-local"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                            #SupportLocal
+                          </span>
+                        </Link>
+                      </div>
+                    </li>
 
                     <a
                       href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"

@@ -50,7 +50,10 @@ const ProgramList = () => {
       {data => (
         <div class="relative bg-white pb-32 overflow-hidden">
           {/* SECTION 1 */}
-          <div class="flex-col justify-between lg:flex lg:flex-row my-12">
+          <div
+            id="west-street-crossfit"
+            class="flex-col justify-between lg:flex lg:flex-row my-12"
+          >
             <div className="mt-6 lg:w-8/12">
               <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                 West Street CrossFit
@@ -96,7 +99,10 @@ const ProgramList = () => {
           </div>
 
           {/* SECTION 2 */}
-          <div class="flex flex-col-reverse justify-between lg:flex lg:flex-row my-12">
+          <div
+            id="personal-training"
+            class="flex flex-col-reverse justify-between lg:flex lg:flex-row my-12"
+          >
             <div class="lg:w-3/12 h-full m-auto">
               <Img
                 className="rounded-xl max-w-lg"
@@ -182,7 +188,10 @@ const ProgramList = () => {
           </div>
 
           {/* SECTION 3 */}
-          <div class="flex-col justify-between lg:flex lg:flex-row my-12">
+          <div
+            id="introduction-to-crossfit"
+            class="flex-col justify-between lg:flex lg:flex-row my-12"
+          >
             <div className="mt-6 lg:w-8/12">
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 Introduction to CrossFit
@@ -217,7 +226,10 @@ const ProgramList = () => {
           </div>
 
           {/* SECTION 4 */}
-          <div class="flex flex-col-reverse justify-between lg:flex lg:flex-row my-12">
+          <div
+            id="corporate-opportunities"
+            class="flex flex-col-reverse justify-between lg:flex lg:flex-row my-12"
+          >
             <div class="lg:w-3/12 h-full">
               <Img
                 className="rounded-xl max-w-lg"
