@@ -8,6 +8,7 @@ const Social = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="mailto:info@northendurance.ca"
+        title="Email"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,6 +27,7 @@ const Social = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.facebook.com/northendurancehfx"
+        title="Facebook"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +46,7 @@ const Social = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.instagram.com/northendurance/"
+        title="Instagram"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -62,6 +65,7 @@ const Social = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.youtube.com/channel/UC1A1DXey_LmjxU7ccs0a1Xw"
+        title="YouTube"
       >
         <svg
           className="icon"

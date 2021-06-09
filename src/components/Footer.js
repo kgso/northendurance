@@ -38,8 +38,8 @@ const Footer = () => {
                   <img src={phone} alt="phone icon" />
                   <li className="text-sm  ml-3">902-481-9516</li>
                 </a>
-                <li className="text-sm">Mon - Fri: 6:00 AM - 8:45 PM</li>
-                <li className="text-sm">Sat & Sun: 9:00 AM - 2:00 PM</li>
+                <li className="text-sm">Mon - Fri: 6:00 AM - 8:30 PM</li>
+                <li className="text-sm">Sat & Sun: 9:00 AM - 1:00 PM</li>
               </ul>
             </div>
           </div>
