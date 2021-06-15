@@ -1,6 +1,4 @@
 import React from "react"
-import CTA from "../components/CTA"
-import Grid from "../components/Grid"
 import Layout from "../components/Layout"
 import PageHero from "../components/PageHero"
 import SEO from "../components/SEO"

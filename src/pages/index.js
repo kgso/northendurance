@@ -1,7 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
 import CTA from "../components/CTA"
-import Grid from "../components/Grid"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 
@@ -22,7 +21,7 @@ const Home = ({ data }) => {
 
 export const HomePageQuery = graphql`
   query {
-    file(relativePath: { eq: "shots/group_shot-1024x398.jpg" }) {
+    file(relativePath: { eq: "shots/group-shot-commons.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1280, quality: 100) {
           ...GatsbyImageSharpFluid

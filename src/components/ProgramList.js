@@ -48,13 +48,13 @@ const ProgramList = () => {
       `}
     >
       {data => (
-        <div class="relative bg-white pb-32 overflow-hidden">
-          {/* SECTION 1 */}
+        <div class="lg:pb-32">
+          {/* West Stree CrossFit */}
           <div
             id="west-street-crossfit"
-            class="flex-col justify-between lg:flex lg:flex-row my-12"
+            class="my-12 flex flex-col lg:flex-row lg:justify-between lg:items-center"
           >
-            <div className="mt-6 lg:w-8/12">
+            <div className="w-full lg:w-8/12">
               <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                 West Street CrossFit
               </h2>
@@ -89,29 +89,29 @@ const ProgramList = () => {
                 athlete to help you get better.
               </p>
             </div>
-            <div class="lg:w-3/12 h-full m-auto">
+            <div class="lg:w-3/12 h-full w-full mt-4">
               <Img
-                className="rounded-xl max-w-lg"
+                className="rounded-xl lg:max-w-lg"
                 fluid={data.crossfit.childImageSharp.fluid}
                 alt="Competition Prep"
               />
             </div>
           </div>
 
-          {/* SECTION 2 */}
+          {/* Personal Training */}
           <div
             id="personal-training"
-            class="flex flex-col-reverse justify-between lg:flex lg:flex-row my-12"
+            class="my-12 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center"
           >
-            <div class="lg:w-3/12 h-full m-auto">
+            <div class="lg:w-3/12 h-full w-full mt-4">
               <Img
-                className="rounded-xl max-w-lg"
+                className="rounded-xl lg:max-w-lg"
                 fluid={data.rightStart.childImageSharp.fluid}
                 alt="Right Start"
               />
             </div>
 
-            <div className="mt-6 lg:w-8/12">
+            <div className="w-full lg:w-8/12">
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 Personal Training
               </h2>
@@ -187,12 +187,12 @@ const ProgramList = () => {
             </div>
           </div>
 
-          {/* SECTION 3 */}
+          {/* Introduction To CrossFit */}
           <div
             id="introduction-to-crossfit"
-            class="flex-col justify-between lg:flex lg:flex-row my-12"
+            class="my-12 flex flex-col lg:justify-between lg:flex-row lg:items-center"
           >
-            <div className="mt-6 lg:w-8/12">
+            <div className="w-full lg:w-8/12">
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 Introduction to CrossFit
               </h2>
@@ -212,48 +212,106 @@ const ProgramList = () => {
                 journey with us. Whether you are currently training at a gym,
                 have a background in sport, or are just trying to get started,
                 please consult with us to talk about what the best next step is
-                for you. If you’re interested in getting started, email us at
-                info@northendurance.ca!
+                for you. If you’re interested in getting started, email us at{" "}
+                <a href="mailto:info@northendurance.ca">
+                  info@northendurance.ca!
+                </a>
               </p>
             </div>
-            <div class="lg:w-3/12 h-full">
+            <div class="w-full lg:w-3/12 h-full mt-4">
               <Img
-                className="rounded-xl max-w-lg"
+                className="rounded-xl lg:max-w-lg"
                 fluid={data.open.childImageSharp.fluid}
                 alt="Open"
               />
             </div>
           </div>
 
-          {/* SECTION 4 */}
+          {/* WSCF Lite */}
+          <div
+            id="wscf-lite"
+            class="my-12 flex flex-col lg:justify-between lg:flex-row lg:items-center"
+          >
+            <div className="w-full lg:w-8/12">
+              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
+                WSCF Lite
+              </h2>
+              <p class="mt-4 text-lg text-gray-500">
+                West Street CrossFit Lite - COMING SOON!
+              </p>
+            </div>
+          </div>
+
+          {/* Corporate Opportunities */}
           <div
             id="corporate-opportunities"
-            class="flex flex-col-reverse justify-between lg:flex lg:flex-row my-12"
+            class="flex flex-col-reverse justify-between lg:flex-row lg:items-center lg:justify-between my-12"
           >
-            <div class="lg:w-3/12 h-full">
+            <div class="lg:w-3/12 w-full h-full mt-4">
               <Img
-                className="rounded-xl max-w-lg"
+                className="rounded-xl lg:max-w-lg"
                 fluid={data.rightStart.childImageSharp.fluid}
                 alt="Right Start"
               />
             </div>
 
-            <div className="mt-6 lg:w-8/12">
+            <div className="mt-6 w-full lg:w-8/12">
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 Corporate Opportunities
               </h2>
-              <p>
+              <p class="mt-4 text-lg text-gray-500">
                 An active lifestyle and regularly incorporating exercise, such
                 as CrossFit, into your routine has been proven to help combat
                 fatigue and illness, reduce stress, improve brain function,
                 alertness, and lead to fewer workplace absences.
               </p>
-              <p>
+              <p class="mt-4 text-lg text-gray-500">
                 Located in the heart of Halifax’s North End, with 6+ classes per
                 every weekday and showers available on site, we are a quick
                 commute from many local businesses! If you are with a company in
                 Halifax, and you or your team would like to make fitness a part
                 of your everyday reach out to us - info@northendurance.ca!
+              </p>
+            </div>
+          </div>
+
+          {/* Virtual Classes */}
+          <div
+            id="virtual-classes"
+            class="flex flex-col-reverse justify-between lg:flex-row-reverse lg:items-center lg:justify-between my-12"
+          >
+            <div class="lg:w-3/12 h-full w-full mt-4">
+              <Img
+                className="rounded-xl lg:max-w-lg"
+                fluid={data.rightStart.childImageSharp.fluid}
+                alt="Right Start"
+              />
+            </div>
+
+            <div className="mt-6 lg:w-8/12 w-full">
+              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
+                Virtual Classes
+              </h2>
+              <p class="mt-4 text-lg text-gray-500">
+                Through the challenges of the COVID-19 pandemic, we were forced
+                to adapt in order to continue to offer a great workout
+                experience for our members from home. The success of our virtual
+                program during the lockdown has inspired us to keep the momentum
+                going! All of our WEST STREET CROSSFIT and WSCF LITE classes are
+                streamed live via Zoom. This feature is included with your
+                Unlimited Membership, it allows you to interact with your
+                Trainer live, and connect with fellow athletes from the comfort
+                of your home!
+              </p>
+              <p class="mt-4 text-lg text-gray-500">
+                If you’re interested in becoming a part of our community from
+                the comfort of yours, or how to get started please contact us{" "}
+                <a href="mailto:info@northendurance.ca">
+                  info@northendurance.ca
+                </a>
+                . We offer the same great introductory programs to help prepare
+                and welcome you to virtual classes as we do in-person at the
+                gym!
               </p>
             </div>
           </div>
