@@ -59,7 +59,7 @@ const SupportLocalGrid = () => {
               href="https://stokefood.ca/"
               target="_blank"
               noopener
-              noreferrer
+              rel="noreferrer"
               className="w-full h-auto m-8"
               title="Stoke Food"
             >
@@ -69,7 +69,7 @@ const SupportLocalGrid = () => {
               href="https://freshprintshalifax.com/"
               target="_blank"
               noopener
-              noreferrer
+              rel="noreferrer"
               className="w-full h-auto m-8"
               title="Fresh Prints"
             >
@@ -82,7 +82,7 @@ const SupportLocalGrid = () => {
               href="http://www.brickyardhealth.com/"
               target="_blank"
               noopener
-              noreferrer
+              rel="noreferrer"
               className="w-full h-auto m-8"
               title="Brickyard Health"
             >
@@ -95,7 +95,7 @@ const SupportLocalGrid = () => {
               href="https://chainyardcider.com/"
               target="_blank"
               noopener
-              noreferrer
+              rel="noreferrer"
               className="w-full h-auto m-8"
               title="Chainyard Cider"
             >

@@ -15,6 +15,7 @@ const Contact = () => {
         <SupportLocalGrid />
         <div className="my-32 relative">
           <iframe
+            title="Google Map"
             width="800"
             height="450"
             style={{ border: 0, marginTop: "20px" }}

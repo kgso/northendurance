@@ -60,7 +60,7 @@ const Header = () => {
               TODAY'S WOD
             </a>
             <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide">
-              <a>About</a>
+              About
               <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60 z-10">
                 <Link
                   to="/schedule"
@@ -89,9 +89,7 @@ const Header = () => {
               </div>
             </li>
             <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide">
-              <a>
-                <a>Programs</a>
-              </a>
+              Programs
               <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-80 z-10">
                 <Link
                   to="/programs#west-street-crossfit"
@@ -133,9 +131,7 @@ const Header = () => {
             </li>
 
             <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide">
-              <a>
-                <a>Contact</a>
-              </a>
+              Contact
               <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60 z-10">
                 <Link
                   to="/contact"
@@ -216,7 +212,7 @@ const Header = () => {
                     </a>
 
                     <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4">
-                      <a>About</a>
+                      About
                       <div className="top-4 h-auto flex flex-col pt-4">
                         <Link
                           to="/schedule"
@@ -254,7 +250,7 @@ const Header = () => {
                     </li>
 
                     <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4">
-                      <a>Programs</a>
+                      Programs
                       <div className="top-4 h-auto flex flex-col pt-4">
                         <Link
                           to="/programs#west-street-crossfit"
@@ -308,7 +304,7 @@ const Header = () => {
                     </li>
 
                     <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4">
-                      <a>Contact</a>
+                      Contact
                       <div className="top-4 h-auto flex flex-col pt-4">
                         <Link
                           to="/contact"
