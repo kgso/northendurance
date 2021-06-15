@@ -48,13 +48,13 @@ const ProgramList = () => {
       `}
     >
       {data => (
-        <div class="pb-32">
+        <div class="lg:pb-32">
           {/* West Stree CrossFit */}
           <div
             id="west-street-crossfit"
             class="my-12 flex flex-col lg:flex-row lg:justify-between lg:items-center"
           >
-            <div className="lg:w-8/12">
+            <div className="w-full lg:w-8/12">
               <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                 West Street CrossFit
               </h2>
@@ -89,9 +89,9 @@ const ProgramList = () => {
                 athlete to help you get better.
               </p>
             </div>
-            <div class="lg:w-3/12 h-full mt-4">
+            <div class="lg:w-3/12 h-full w-full mt-4">
               <Img
-                className="rounded-xl max-w-lg"
+                className="rounded-xl lg:max-w-lg"
                 fluid={data.crossfit.childImageSharp.fluid}
                 alt="Competition Prep"
               />
@@ -103,15 +103,15 @@ const ProgramList = () => {
             id="personal-training"
             class="my-12 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center"
           >
-            <div class="lg:w-3/12 h-full mt-4">
+            <div class="lg:w-3/12 h-full w-full mt-4">
               <Img
-                className="rounded-xl max-w-lg"
+                className="rounded-xl lg:max-w-lg"
                 fluid={data.rightStart.childImageSharp.fluid}
                 alt="Right Start"
               />
             </div>
 
-            <div className="lg:w-8/12">
+            <div className="w-full lg:w-8/12">
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 Personal Training
               </h2>
@@ -192,7 +192,7 @@ const ProgramList = () => {
             id="introduction-to-crossfit"
             class="my-12 flex flex-col lg:justify-between lg:flex-row lg:items-center"
           >
-            <div className="lg:w-8/12">
+            <div className="w-full lg:w-8/12">
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 Introduction to CrossFit
               </h2>
@@ -218,9 +218,9 @@ const ProgramList = () => {
                 </a>
               </p>
             </div>
-            <div class="lg:w-3/12 h-full mt-4">
+            <div class="w-full lg:w-3/12 h-full mt-4">
               <Img
-                className="rounded-xl max-w-lg"
+                className="rounded-xl lg:max-w-lg"
                 fluid={data.open.childImageSharp.fluid}
                 alt="Open"
               />
@@ -232,7 +232,7 @@ const ProgramList = () => {
             id="wscf-lite"
             class="my-12 flex flex-col lg:justify-between lg:flex-row lg:items-center"
           >
-            <div className="lg:w-8/12">
+            <div className="w-full lg:w-8/12">
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 WSCF Lite
               </h2>
@@ -247,15 +247,15 @@ const ProgramList = () => {
             id="corporate-opportunities"
             class="flex flex-col-reverse justify-between lg:flex-row lg:items-center lg:justify-between my-12"
           >
-            <div class="lg:w-3/12 h-full mt-4">
+            <div class="lg:w-3/12 w-full h-full mt-4">
               <Img
-                className="rounded-xl max-w-lg"
+                className="rounded-xl lg:max-w-lg"
                 fluid={data.rightStart.childImageSharp.fluid}
                 alt="Right Start"
               />
             </div>
 
-            <div className="mt-6 lg:w-8/12">
+            <div className="mt-6 w-full lg:w-8/12">
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 Corporate Opportunities
               </h2>
@@ -280,15 +280,15 @@ const ProgramList = () => {
             id="virtual-classes"
             class="flex flex-col-reverse justify-between lg:flex-row-reverse lg:items-center lg:justify-between my-12"
           >
-            <div class="lg:w-3/12 h-full mt-4">
+            <div class="lg:w-3/12 h-full w-full mt-4">
               <Img
-                className="rounded-xl max-w-lg"
+                className="rounded-xl lg:max-w-lg"
                 fluid={data.rightStart.childImageSharp.fluid}
                 alt="Right Start"
               />
             </div>
 
-            <div className="mt-6 lg:w-8/12">
+            <div className="mt-6 lg:w-8/12 w-full">
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 Virtual Classes
               </h2>
