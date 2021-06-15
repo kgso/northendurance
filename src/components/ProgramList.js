@@ -206,14 +206,16 @@ const ProgramList = () => {
               </p>
               <p class="mt-4 text-lg text-gray-500">
                 This 4 session program is meant to teach you the foundational
-                movements of CrossFit, basic gymnastics, CrossFit terminology, and
-                introduce athletes to the North Endurance community! In 4 x 60 minute
-                sessions, you’ll be ready to begin your CrossFit journey with us.
-                Whether you are currently training at a gym, have a background in
-                sport, or are just trying to get started, please consult with us to
-                talk about what the best next step is for you. If you’re
-                interested in getting started, email us at <a
-                href="mailto:info@northendurance.ca">info@northendurance.ca!</a>
+                movements of CrossFit, basic gymnastics, CrossFit terminology,
+                and introduce athletes to the North Endurance community! In 4 x
+                60 minute sessions, you’ll be ready to begin your CrossFit
+                journey with us. Whether you are currently training at a gym,
+                have a background in sport, or are just trying to get started,
+                please consult with us to talk about what the best next step is
+                for you. If you’re interested in getting started, email us at{" "}
+                <a href="mailto:info@northendurance.ca">
+                  info@northendurance.ca!
+                </a>
               </p>
             </div>
             <div class="lg:w-3/12 h-full mt-4">
@@ -222,6 +224,21 @@ const ProgramList = () => {
                 fluid={data.open.childImageSharp.fluid}
                 alt="Open"
               />
+            </div>
+          </div>
+
+          {/* WSCF Lite */}
+          <div
+            id="wscf-lite"
+            class="my-12 flex flex-col lg:justify-between lg:flex-row lg:items-center"
+          >
+            <div className="lg:w-8/12">
+              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
+                WSCF Lite
+              </h2>
+              <p class="mt-4 text-lg text-gray-500">
+                West Street CrossFit Lite - COMING SOON!
+              </p>
             </div>
           </div>
 
@@ -248,7 +265,7 @@ const ProgramList = () => {
                 fatigue and illness, reduce stress, improve brain function,
                 alertness, and lead to fewer workplace absences.
               </p>
-            <p class="mt-4 text-lg text-gray-500">
+              <p class="mt-4 text-lg text-gray-500">
                 Located in the heart of Halifax’s North End, with 6+ classes per
                 every weekday and showers available on site, we are a quick
                 commute from many local businesses! If you are with a company in
@@ -258,7 +275,7 @@ const ProgramList = () => {
             </div>
           </div>
 
-        {/* Virtual Classes */}
+          {/* Virtual Classes */}
           <div
             id="virtual-classes"
             class="flex flex-col-reverse justify-between lg:flex-row-reverse lg:items-center lg:justify-between my-12"
@@ -276,22 +293,26 @@ const ProgramList = () => {
                 Virtual Classes
               </h2>
               <p class="mt-4 text-lg text-gray-500">
-                Through the challenges of the COVID-19 pandemic, we were forced to
-                adapt in order to continue to offer a great workout experience for our
-                members from home. The success of our virtual program during the
-                lockdown has inspired us to keep the momentum going! All of our WEST
-                STREET CROSSFIT and WSCF LITE classes are streamed live via Zoom. This
-                feature is included with your Unlimited Membership, it allows you to
-                interact with your Trainer live, and connect with fellow athletes from
-                the comfort of your home!
-            </p>
-            <p class="mt-4 text-lg text-gray-500">
-              If you’re interested in becoming a part of our community from the
-              comfort of yours, or how to get started please contact us <a
-              href="mailto:info@northendurance.ca">info@northendurance.ca</a>. We
-              offer the same great introductory programs to help prepare and welcome
-              you to virtual classes as we do in-person at the gym!
-            </p>
+                Through the challenges of the COVID-19 pandemic, we were forced
+                to adapt in order to continue to offer a great workout
+                experience for our members from home. The success of our virtual
+                program during the lockdown has inspired us to keep the momentum
+                going! All of our WEST STREET CROSSFIT and WSCF LITE classes are
+                streamed live via Zoom. This feature is included with your
+                Unlimited Membership, it allows you to interact with your
+                Trainer live, and connect with fellow athletes from the comfort
+                of your home!
+              </p>
+              <p class="mt-4 text-lg text-gray-500">
+                If you’re interested in becoming a part of our community from
+                the comfort of yours, or how to get started please contact us{" "}
+                <a href="mailto:info@northendurance.ca">
+                  info@northendurance.ca
+                </a>
+                . We offer the same great introductory programs to help prepare
+                and welcome you to virtual classes as we do in-person at the
+                gym!
+              </p>
             </div>
           </div>
         </div>
