@@ -6,7 +6,6 @@ import homeOf from "../assets/images/logos/homeof.png"
 
 const Hero = () => (
   <>
-    <div className="">
       <div className="sm:text-center my-10 max-w-3xl m-auto	flex flex-col sm:flex-row justify-between items-center">
         <div className="w-80 md:w-2/4">
           <img src={logo} className="mw-80" />
@@ -19,7 +18,6 @@ const Hero = () => (
           </div>
         </div>
       </div>
-    </div>
   </>
 )
 
