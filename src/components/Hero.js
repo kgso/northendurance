@@ -13,8 +13,8 @@ const Hero = () => (
       <div className="m-auto w-2/4 my-8 sm:my-0 flex justify-center items-center">
         <div className="sm:w-1/4"></div>
         <div className="w-2/4 m-auto flex flex-row sm:flex-col justify-center items-center">
-          <img src={homeOf} className="h-1/4 px-4 sm:px-10" alt="Home Of"/>
-          <img src={westStreet} className="h-3/4 sm:p-2" alt="West Street CrossFit"/>
+          <img src={homeOf} className="px-4 sm:px-10" alt="Home Of"/>
+          <img src={westStreet} className="sm:p-2" alt="West Street CrossFit"/>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import SEO from "../components/SEO"
 const OurStory = () => {
   return (
     <Layout>
-      <SEO title="About | North Endurance" />
+      <SEO title="Our Story | North Endurance" />
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8">
         <PageHero title="Our Story" />
         <ClientStories />
