@@ -50,18 +50,18 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8 z-50">
+          <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8 z-20">
             <a
               href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-wide relative"
+              className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-wide relative z-20"
             >
               TODAY'S WOD
             </a>
-            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide">
+            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide z-20">
               About
-              <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60 z-10">
+              <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-40 z-10 bg-white">
                 <Link
                   to="/schedule"
                   className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
@@ -88,9 +88,9 @@ const Header = () => {
                 </Link>
               </div>
             </li>
-            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide">
+            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide z-20">
               Programs
-              <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-80 z-10">
+              <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-80 z-10 bg-white">
                 <Link
                   to="/programs#west-street-crossfit"
                   className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
@@ -110,10 +110,10 @@ const Header = () => {
                   Introduction to CrossFit
                 </Link>
                 <Link
-                  to="/programs#wscf-lite"
+                  to="/programs#crossfit-lite"
                   className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
                 >
-                  WSCF Lite
+                  CrossFit Lite
                 </Link>
                 <Link
                   to="/programs#corporate-opportunities"
@@ -130,9 +130,9 @@ const Header = () => {
               </div>
             </li>
 
-            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide">
+            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide z-20">
               Contact
-              <div className="top-4 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60 z-10">
+              <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60 z-10 bg-white">
                 <Link
                   to="/contact"
                   className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
@@ -152,9 +152,10 @@ const Header = () => {
               href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"
               target="_blank"
               rel="noopener noreferrer"
+              className="z-50 relative"
             >
               <img
-                className="h-8 w-auto inline"
+                className="h-8 w-auto inline z-50"
                 src={zenplanner}
                 alt="ZenPlanner"
               />
@@ -249,9 +250,9 @@ const Header = () => {
                       </div>
                     </li>
 
-                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4">
+                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4 z-10">
                       Programs
-                      <div className="top-4 h-auto flex flex-col pt-4">
+                      <div className="top-4 h-auto flex flex-col pt-4 z-10">
                         <Link
                           to="/programs#west-street-crossfit"
                           className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
@@ -277,11 +278,11 @@ const Header = () => {
                           </span>
                         </Link>
                         <Link
-                          to="/programs#wscf-lite"
+                          to="/programs#crossfit-lite"
                           className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                         >
                           <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
-                            WSCF Lite
+                            CrossFit Lite
                           </span>
                         </Link>
                         <Link
@@ -329,7 +330,7 @@ const Header = () => {
                       href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                      className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100 z-20"
                     >
                       <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2">
                         ZenPlanner

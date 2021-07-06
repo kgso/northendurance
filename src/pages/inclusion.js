@@ -1,18 +1,45 @@
 import React from "react"
+import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 import PageHero from "../components/PageHero"
 import SEO from "../components/SEO"
 
-const Inclusion = () => {
+const Inclusion = ({ data }) => {
   return (
     <Layout>
-      <SEO title="About | North Endurance" />
+      <SEO title="Inclusion | North Endurance" />
+      <PageHero title="Inclusion" />
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8">
-        <PageHero title="Inclusion" />
+        <div
+            id="corporate-opportunities"
+            class="flex flex-col-reverse justify-between lg:flex-row-reverse lg:items-center lg:justify-between my-12"
+          >
+            <div class="lg:w-3/12 w-full h-full mt-4">
+              <Img fluid={data.file.childImageSharp.fluid} className="rounded-xl lg:max-w-lg" alt="The Out Foundation" />
+            </div>
+
+            <div className="mt-6 w-full lg:w-8/12">
+              <p class="mt-4 text-lg text-gray-500">
+                The OUT Foundation is on a mission to remove the barriers that block LGBTQ+ people from accessing and participating in fitness, health, and wellness. The foundation is dedicated to nurturing, empowering, and celebrating LGBTQ+ bodies and minds. 
+              </p>
+            </div>
+          </div>
       </div>
     </Layout>
   )
 }
+
+export const InclusionQuery = graphql`
+  query {
+    file(relativePath: { eq: "shots/out-foundation.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1280, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default Inclusion
