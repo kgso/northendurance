@@ -27,7 +27,7 @@ const coachImageQuery = graphql`
         }
       }
     }
-    erinn: file(relativePath: { eq: "coaches/erinn.jpg" }) {
+    marie: file(relativePath: { eq: "coaches/marie.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 275, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -35,6 +35,27 @@ const coachImageQuery = graphql`
       }
     }
     kim: file(relativePath: { eq: "coaches/kim.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 275, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bernie: file(relativePath: { eq: "coaches/bernie.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 275, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    jess: file(relativePath: { eq: "coaches/jess.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 275, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    sam: file(relativePath: { eq: "coaches/sam.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 275, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -64,7 +85,8 @@ const Coaches = () => {
                       <Img
                         fluid={data[coach.imageKey].childImageSharp.fluid}
                         alt={coach.name}
-                        className="w-full h-auto"
+                        className="w-full max-h-52 object-top"
+                        imgStyle={{ objectPosition: "50% 20%" }}
                       />
                     )}
                     <div className="absolute inset-0 flex items-center justify-center text-center rounded-md opacity-15 transition ease-in-out duration-150"></div>

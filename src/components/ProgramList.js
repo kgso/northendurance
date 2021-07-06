@@ -7,7 +7,9 @@ const ProgramList = () => {
     <StaticQuery
       query={graphql`
         query {
-          rightStart: file(relativePath: { eq: "shots/right_start_classes.jpg" }) {
+          rightStart: file(
+            relativePath: { eq: "shots/right_start_classes.jpg" }
+          ) {
             childImageSharp {
               fluid(maxWidth: 1000, quality: 100) {
                 ...GatsbyImageSharpFluid
@@ -23,7 +25,9 @@ const ProgramList = () => {
               }
             }
           }
-          personalTraining: file(relativePath: { eq: "shots/IMG_1675.jpg" }) {
+          personalTraining: file(
+            relativePath: { eq: "shots/personal_training.jpg" }
+          ) {
             childImageSharp {
               fluid(maxWidth: 1000, quality: 100) {
                 ...GatsbyImageSharpFluid
@@ -258,16 +262,36 @@ const ProgramList = () => {
                 CrossFit Lite
               </h2>
               <p class="mt-4 text-lg text-gray-500">
-              The West Street CrossFit Lite program is truly for everyone! While following the same quality programming of our regular CrossFit classes, our Lite program puts a heightened focus on safe movement with lighter weights and regularly revisiting the importance of our foundations in the pursuit of long term health and wellness.
+                The West Street CrossFit Lite program is truly for everyone!
+                While following the same quality programming of our regular
+                CrossFit classes, our Lite program puts a heightened focus on
+                safe movement with lighter weights and regularly revisiting the
+                importance of our foundations in the pursuit of long term health
+                and wellness.
               </p>
               <p class="mt-4 text-lg text-gray-500">
-                In addition, we recognize that the “high intensity, loud music, and weights dropping” atmosphere is certainly not always appealing. That’s why in our Lite program we restrict the volume of the music, we don’t drop weights, and we maintain a more relaxing vibe while still making sure that you get a great workout!
+                In addition, we recognize that the “high intensity, loud music,
+                and weights dropping” atmosphere is certainly not always
+                appealing. That’s why in our Lite program we restrict the volume
+                of the music, we don’t drop weights, and we maintain a more
+                relaxing vibe while still making sure that you get a great
+                workout!
               </p>
               <p class="mt-4 text-lg text-gray-500">
-                If you are a parent or guardian with a young baby, and need space to set up a playard or playpen - we have that. If you are a senior looking to improve your strength, mobility, or cardio to chase your grandchildren around the park - this program will help you do that. Or simply if you are someone who is interested in a great workout with friends without any sort of intimidation this is what you’re looking for!
+                If you are a parent or guardian with a young baby, and need
+                space to set up a playard or playpen - we have that. If you are
+                a senior looking to improve your strength, mobility, or cardio
+                to chase your grandchildren around the park - this program will
+                help you do that. Or simply if you are someone who is interested
+                in a great workout with friends without any sort of intimidation
+                this is what you’re looking for!
               </p>
               <p class="mt-4 text-lg text-gray-500">
-                If you have any further questions about our CrossFit Lite program, email us! We’re very excited to launch this program 2 times per week (Monday and Wednesday at 1:30pm) beginning MONDAY, AUGUST 9TH, 2021. Please note that additional classes may be added based on demand as our launch date approaches.              
+                If you have any further questions about our CrossFit Lite
+                program, email us! We’re very excited to launch this program 2
+                times per week (Monday and Wednesday at 1:30pm) beginning
+                MONDAY, AUGUST 9TH, 2021. Please note that additional classes
+                may be added based on demand as our launch date approaches.
               </p>
             </div>
           </div>

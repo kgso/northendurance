@@ -12,9 +12,9 @@ const Home = ({ data }) => {
     <Layout>
       <SEO title="Home | North Endurance" />
       <Hero />
-      <Img fluid={data.file.childImageSharp.fluid} />
+      <Img fluid={data.file.childImageSharp.fluid} className="max-h-96" />
       <SafetyNotice />
-      <CTA />
+      {/* <CTA /> */}
     </Layout>
   )
 }
