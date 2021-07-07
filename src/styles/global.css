@@ -9,7 +9,11 @@ svg.icon:hover {
 @font-face {
   font-family: LogoFont;
   src: url("../assets/fonts/againts.ttf") format("truetype");
-  /* url("../assets/fonts/againts.otf") format("opentype"); */
+}
+
+@font-face {
+  font-family: Varsity;
+  src: url("../assets/fonts/varsity_regular.ttf") format("truetype");
 }
 
 .dropdown:hover .dropdown-menu {
