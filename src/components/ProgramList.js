@@ -109,7 +109,7 @@ const ProgramList = () => {
             </div>
             <div class="lg:w-3/12 h-full w-full mt-4">
               <Img
-                className="rounded-xl lg:max-w-lg"
+                className="rounded-xl w-2/4 m-auto md:w-full md:max-w-lg "
                 fluid={data.crossfit.childImageSharp.fluid}
                 alt="West Street CrossFit"
               />
@@ -123,7 +123,7 @@ const ProgramList = () => {
           >
             <div class="lg:w-3/12 h-full w-full mt-4">
               <Img
-                className="rounded-xl lg:max-w-lg"
+                className="rounded-xl w-2/4 m-auto md:w-full md:max-w-lg "
                 fluid={data.personalTraining.childImageSharp.fluid}
                 alt="Personal Training"
               />
@@ -238,7 +238,7 @@ const ProgramList = () => {
             </div>
             <div class="w-full lg:w-3/12 h-full mt-4">
               <Img
-                className="rounded-xl lg:max-w-lg"
+                className="rounded-xl w-2/4 m-auto md:w-full md:max-w-lg "
                 fluid={data.rightStart.childImageSharp.fluid}
                 alt="Right Start"
               />
@@ -252,7 +252,7 @@ const ProgramList = () => {
           >
             <div class="lg:w-3/12 h-full w-full mt-4">
               <Img
-                className="rounded-xl lg:max-w-lg"
+                className="rounded-xl w-2/4 m-auto md:w-full md:max-w-lg "
                 fluid={data.cf_lite.childImageSharp.fluid}
                 alt="CrossFit Lite"
               />
@@ -303,7 +303,7 @@ const ProgramList = () => {
           >
             <div class="lg:w-3/12 w-full h-full mt-4">
               <Img
-                className="rounded-xl lg:max-w-lg"
+                className="rounded-xl w-2/4 m-auto md:w-full md:max-w-lg "
                 fluid={data.corporate.childImageSharp.fluid}
                 alt="Corporate Opportunities"
               />
@@ -336,7 +336,7 @@ const ProgramList = () => {
           >
             <div class="lg:w-3/12 h-full w-full mt-4">
               <Img
-                className="rounded-xl lg:max-w-lg"
+                className="rounded-xl w-2/4 m-auto md:w-full md:max-w-lg "
                 fluid={data.virtual.childImageSharp.fluid}
                 alt="Virtual Classes"
               />

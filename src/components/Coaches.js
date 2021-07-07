@@ -62,6 +62,20 @@ const coachImageQuery = graphql`
         }
       }
     }
+    keith: file(relativePath: { eq: "coaches/keith.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 275, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    melissa: file(relativePath: { eq: "coaches/melissa.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 275, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
@@ -85,7 +99,7 @@ const Coaches = () => {
                       <Img
                         fluid={data[coach.imageKey].childImageSharp.fluid}
                         alt={coach.name}
-                        className="w-full max-h-52 object-top"
+                        className="w-full object-fill object-top"
                         imgStyle={{ objectPosition: "50% 20%" }}
                       />
                     )}

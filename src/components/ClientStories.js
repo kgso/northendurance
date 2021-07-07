@@ -41,7 +41,7 @@ const ClientStories = () => {
                   allowFullScreen="1"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   title="YouTube video player"
-                  src="https://www.youtube.com/embed/3JCQN5umSzc?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.crossfitkinetics.com&amp;widgetid=4"
+                  src="https://www.youtube.com/embed/9qu15BAw-dU?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.crossfitkinetics.com&amp;widgetid=4"
                   width="400"
                   height="235"
                 ></iframe>
@@ -61,7 +61,7 @@ const ClientStories = () => {
                   allowFullScreen="1"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   title="YouTube video player"
-                  src="https://www.youtube.com/embed/3JCQN5umSzc?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.crossfitkinetics.com&amp;widgetid=4"
+                  src="https://www.youtube.com/embed/jhH_4k22fDg?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.crossfitkinetics.com&amp;widgetid=4"
                   width="400"
                   height="235"
                 ></iframe>
@@ -81,7 +81,7 @@ const ClientStories = () => {
                   allowFullScreen="1"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   title="YouTube video player"
-                  src="https://www.youtube.com/embed/3JCQN5umSzc?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.crossfitkinetics.com&amp;widgetid=4"
+                  src="https://www.youtube.com/embed/dapco_ImSmI?controls=0&amp;rel=0&amp;disablekb=1&amp;showinfo=0&amp;modestbranding=0&amp;html5=1&amp;iv_load_policy=3&amp;autoplay=0&amp;end=0&amp;loop=0&amp;playsinline=0&amp;start=0&amp;nocookie=false&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.crossfitkinetics.com&amp;widgetid=4"
                   width="400"
                   height="235"
                 ></iframe>

@@ -1,13 +1,13 @@
 export default [
   {
     name: "Adam Nicholson",
-    role: "Co-Owner/Trainer",
+    role: "Owner/Trainer",
     qualifications: "CF-L2 / CF Weightlifting / CF Gymnastics",
     imageKey: "adam",
   },
   {
     name: "Samantha Nicholson",
-    role: "Co-Owner",
+    role: "Owner",
     imageKey: "sam",
   },
   {
@@ -45,5 +45,16 @@ export default [
     role: "Yoga Instructor",
     qualifications: "RMT",
     imageKey: "marie",
+  },
+  {
+    name: "Keith Kenny",
+    role: "Trainer",
+    qualifications: "CF-L2",
+    imageKey: "keith",
+  },
+  {
+    name: "Melissa Kenny",
+    role: "Trainer",
+    imageKey: "melissa",
   },
 ]

@@ -12,7 +12,6 @@ const Programs = () => {
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8">
         <PageHero title="Programs" />
         <ProgramList />
-        <CTA />
       </div>
     </Layout>
   )
