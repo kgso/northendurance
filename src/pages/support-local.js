@@ -9,7 +9,11 @@ const SupportLocal = () => (
     <SEO title="Support Local | North Endurance" />
     <PageHero title="Support Local" />
     <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
-      <SupportLocalGrid />
+      <div className="mt-24 mb-64">
+        <h2 class="mt-2 text-xl md:mt-0 md:text-2xl lg:text-3xl tracking-tight font-extrabold text-gray-900">
+          COMING SOON!
+        </h2>
+      </div>
     </div>
   </Layout>
 )
