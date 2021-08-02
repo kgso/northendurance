@@ -46,7 +46,7 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 p-8 justify-center items-center flex flex-row">
             <Crossfit></Crossfit>
           </div>
-          <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 pl-8 justify-center items-center flex">
+          <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 justify-center items-center flex">
             <Social></Social>
           </div>
         </div>
