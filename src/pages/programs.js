@@ -7,7 +7,7 @@ import SEO from "../components/SEO"
 
 const Programs = () => {
   return (
-    <Layout>
+    <Layout moreSpace>
       <SEO title="Programs | North Endurance" />
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8">
         <PageHero title="Programs" />

@@ -231,9 +231,13 @@ const ProgramList = () => {
                 have a background in sport, or are just trying to get started,
                 please consult with us to talk about what the best next step is
                 for you. If you’re interested in getting started, email us at{" "}
-                <a href="mailto:info@northendurance.ca">
-                  info@northendurance.ca!
+                <a
+                  href="mailto:info@northendurance.ca"
+                  className="text-red-600 hover:text-gray-500"
+                >
+                  info@northendurance.ca
                 </a>
+                !
               </p>
             </div>
             <div class="w-full lg:w-3/12 h-full mt-4">
@@ -324,7 +328,14 @@ const ProgramList = () => {
                 every weekday and showers available on site, we are a quick
                 commute from many local businesses! If you are with a company in
                 Halifax, and you or your team would like to make fitness a part
-                of your everyday reach out to us - info@northendurance.ca!
+                of your everyday reach out to us -{" "}
+                <a
+                  href="mailto:info@northendurance.ca"
+                  className="text-red-600 hover:text-gray-500"
+                >
+                  info@northendurance.ca
+                </a>
+                !
               </p>
             </div>
           </div>
@@ -360,7 +371,10 @@ const ProgramList = () => {
               <p class="mt-4 text-lg text-gray-500">
                 If you’re interested in becoming a part of our community from
                 the comfort of yours, or how to get started please contact us{" "}
-                <a href="mailto:info@northendurance.ca">
+                <a
+                  href="mailto:info@northendurance.ca"
+                  className="text-red-600 hover:text-gray-500"
+                >
                   info@northendurance.ca
                 </a>
                 . We offer the same great introductory programs to help prepare

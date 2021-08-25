@@ -13,16 +13,18 @@ const Inclusion = ({ data }) => {
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8">
         <div
           id="corporate-opportunities"
-          class="flex flex-col-reverse justify-between lg:flex-row-reverse lg:items-center lg:justify-between my-12"
+          className="flex flex-col-reverse justify-between lg:flex-row-reverse lg:items-center lg:justify-between my-12"
         >
-          <a href="https://theoutfoundation.org/" target="_blank">
-            <div class="lg:w-3/12 w-2/4 m-auto h-full mt-4">
-              <Img
-                fluid={data.file.childImageSharp.fluid}
-                className="rounded-xl lg:max-w-lg"
-                alt="The Out Foundation"
-              />
-            </div>
+          <a
+            href="https://theoutfoundation.org/"
+            target="_blank"
+            className="lg:w-3/12 w-2/4 m-auto h-full mt-4"
+          >
+            <Img
+              fluid={data.file.childImageSharp.fluid}
+              className="rounded-xl lg:max-w-lg"
+              alt="The Out Foundation"
+            />
           </a>
 
           <div className="mt-6 w-full lg:w-8/12">
