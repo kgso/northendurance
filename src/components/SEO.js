@@ -10,12 +10,12 @@ const SEO = ({ title, data }) => {
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={window.location.href} />
+      <link rel="canonical" href={window?.location.href ?? ""} />
       <meta
         name="description"
         content="Welcome to North Endurance - home of West Street CrossFit!"
       />
-      <meta property="og:url" content={window.location.href} />
+      <meta property="og:url" content={window?.location.href ?? ""} />
       <meta property="og:locale" content="en_CA" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="North Endurance" />
