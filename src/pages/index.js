@@ -11,6 +11,8 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home | North Endurance" />
+      <h1 hidden>NORTH ENDURANCE</h1>
+      <h2 hidden>The Home of West Street CrossFit</h2>
       <Hero />
       <Img fluid={data.file.childImageSharp.fluid} className="max-h-96" />
       <SafetyNotice />
