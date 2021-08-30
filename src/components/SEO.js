@@ -19,6 +19,10 @@ const SEO = ({ title, data }) => {
         content="Welcome to North Endurance - home of West Street CrossFit!"
       />
       <meta
+        name="keywords"
+        content="North Endurance, Halifax, CrossFit, Gym, Fitness, Community, Halifax CrossFit, North Endurance Halifax, CrossFit Kinetics"
+      />
+      <meta
         property="og:url"
         content={typeof window !== "undefined" ? window.location.href : ""}
       />
