@@ -16,7 +16,7 @@ const SEO = ({ title, data }) => {
       />
       <meta
         name="description"
-        content="Welcome to North Endurance - home of West Street CrossFit!"
+        content="Welcome to North Endurance - home of West Street CrossFit! As the COVID-19 pandemic continues to affect our day to day lives, the health and safety of our athletes and community has never been more important to us. We are currently operating at a limited capacity as we work to keep North Endurance clean and safe! If you are interested in getting started with us, or you have any questions, please contact us!"
       />
       <meta
         name="keywords"
@@ -32,7 +32,7 @@ const SEO = ({ title, data }) => {
       <meta property="og:title" content={title} />
       <meta
         property="og:description"
-        content="Welcome to North Endurance - home of West Street CrossFit!"
+        content="Welcome to North Endurance - home of West Street CrossFit! As the COVID-19 pandemic continues to affect our day to day lives, the health and safety of our athletes and community has never been more important to us. We are currently operating at a limited capacity as we work to keep North Endurance clean and safe! If you are interested in getting started with us, or you have any questions, please contact us!"
       />
       <meta property="og:image" content={groupShot} />
       <meta property="og:site_name" content="North Endurance" />
