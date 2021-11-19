@@ -41,14 +41,7 @@ const ProgramList = () => {
               }
             }
           }
-          virtual: file(relativePath: { eq: "shots/zoom_classes.jpg" }) {
-            childImageSharp {
-              fluid(maxWidth: 350, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          cf_lite: file(relativePath: { eq: "shots/cf_lite.jpg" }) {
+          cf_lite: file(relativePath: { eq: "shots/sam_henry.jpeg" }) {
             childImageSharp {
               fluid(maxWidth: 350, quality: 100) {
                 ...GatsbyImageSharpFluid
@@ -336,50 +329,6 @@ const ProgramList = () => {
                   info@northendurance.ca
                 </a>
                 !
-              </p>
-            </div>
-          </div>
-
-          {/* Virtual Classes */}
-          <div
-            id="virtual-classes"
-            class="flex flex-col-reverse justify-between lg:flex-row lg:items-center lg:justify-between my-12"
-          >
-            <div class="lg:w-3/12 h-full w-full mt-4">
-              <Img
-                className="rounded-xl w-2/4 m-auto md:w-full md:max-w-lg "
-                fluid={data.virtual.childImageSharp.fluid}
-                alt="Virtual Classes"
-              />
-            </div>
-
-            <div className="mt-6 lg:w-8/12 w-full">
-              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-                Virtual Classes
-              </h2>
-              <p class="mt-4 text-lg text-gray-500">
-                Through the challenges of the COVID-19 pandemic, we were forced
-                to adapt in order to continue to offer a great workout
-                experience for our members from home. The success of our virtual
-                program during the lockdown has inspired us to keep the momentum
-                going! All of our WEST STREET CROSSFIT and WSCF LITE classes are
-                streamed live via Zoom. This feature is included with your
-                Unlimited Membership, it allows you to interact with your
-                Trainer live, and connect with fellow athletes from the comfort
-                of your home!
-              </p>
-              <p class="mt-4 text-lg text-gray-500">
-                If you’re interested in becoming a part of our community from
-                the comfort of yours, or how to get started please contact us{" "}
-                <a
-                  href="mailto:info@northendurance.ca"
-                  className="text-red-600 hover:text-gray-500"
-                >
-                  info@northendurance.ca
-                </a>
-                . We offer the same great introductory programs to help prepare
-                and welcome you to virtual classes as we do in-person at the
-                gym!
               </p>
             </div>
           </div>
