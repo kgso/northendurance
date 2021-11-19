@@ -121,12 +121,6 @@ const Header = () => {
                 >
                   Corporate Opportunities
                 </Link>
-                <Link
-                  to="/programs#virtual-classes"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
-                >
-                  Virtual Classes
-                </Link>
               </div>
             </li>
 
@@ -291,14 +285,6 @@ const Header = () => {
                         >
                           <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
                             Corporate Opportunities
-                          </span>
-                        </Link>
-                        <Link
-                          to="/programs#virtual-classes"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
-                            Virtual Classes
                           </span>
                         </Link>
                       </div>
