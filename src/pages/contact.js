@@ -1,10 +1,13 @@
 import React from "react"
+
 import Grid from "../components/Grid"
 import Layout from "../components/Layout"
 import PageHero from "../components/PageHero"
 import SEO from "../components/SEO"
 
 const Contact = () => {
+  const mapLink = `https://www.google.com/maps/embed/v1/place?key=${process.env.GATSBY_GOOGLE_API_KEY}&q=North+Endurance,Halifax+NS`
+
   return (
     <Layout>
       <SEO title="Contact | North Endurance" />
@@ -18,7 +21,7 @@ const Contact = () => {
           style={{ border: 0, marginTop: "20px" }}
           loading="lazy"
           allowfullscreen
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTl36RZaYHN7ggdTJ4QcSSBX9lUzgrtpc&q=North+Endurance,Halifax+NS"
+          src={mapLink}
         ></iframe>
       </div>
     </Layout>
