@@ -1,5 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
+import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import PageHero from "../components/PageHero"
