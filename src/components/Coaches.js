@@ -20,56 +20,14 @@ const coachImageQuery = graphql`
         }
       }
     }
-    boo: file(relativePath: { eq: "coaches/boo.jpg" }) {
+    rhea: file(relativePath: { eq: "coaches/rhea.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 275, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    marie: file(relativePath: { eq: "coaches/marie.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 275, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    kim: file(relativePath: { eq: "coaches/kim.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 275, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    bernie: file(relativePath: { eq: "coaches/bernie.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 275, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    jess: file(relativePath: { eq: "coaches/jess.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 275, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    sam: file(relativePath: { eq: "coaches/sam.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 275, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    keith: file(relativePath: { eq: "coaches/keith.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 275, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    melissa: file(relativePath: { eq: "coaches/melissa.jpg" }) {
+    nicole: file(relativePath: { eq: "coaches/nicole.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 275, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -84,48 +42,42 @@ const Coaches = () => {
     <StaticQuery query={coachImageQuery}>
       {data => (
         <div className="my-10">
-          <div
-            id="product-marketing-sections"
-            className="pt-8 grid grid-cols-1 gap-y-6 lg:grid-cols-4 lg:gap-5"
-          >
+          <div id="product-marketing-sections" className="pt-8 gap-y-6">
             <h2 className="text-base text-red-600 font-semibold tracking-wide uppercase">
               Coaches
             </h2>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-6 md:grid-cols-4 lg:col-span-4">
-              {coaches.map(coach => (
-                <figure>
-                  <div className="relative rounded overflow-hidden transition transform duration-150 ease-in-out">
-                    {coach.imageKey && (
-                      <Img
-                        fluid={data[coach.imageKey].childImageSharp.fluid}
-                        alt={coach.name}
-                        className="w-full object-fill object-top"
-                        imgStyle={{ objectPosition: "50% 20%" }}
-                      />
-                    )}
-                    <div className="absolute inset-0 flex items-center justify-center text-center rounded-md opacity-15 transition ease-in-out duration-150"></div>
-                    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transition ease-in-out duration-150"></div>
-                  </div>
-                  <figcaption className="mt-3">
-                    {coach.name && (
-                      <p className="text-sm font-bold text-yellow-500">
-                        {coach.name}
-                      </p>
-                    )}
-                    {coach.role && (
-                      <p className="text-sm font-medium text-yellow-700">
-                        {coach.role}
-                      </p>
-                    )}
-                    {coach.qualifications && (
-                      <p className="text-sm text-red-900">
-                        {coach.qualifications}
-                      </p>
-                    )}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
+            {coaches.map(coach => (
+              <div className="md:flex mt-5">
+                <div className="py-4 md:p-0 md:w-1/3 rounded overflow-hidden transition transform duration-150 ease-in-out">
+                  {coach.imageKey && (
+                    <Img
+                      fluid={data[coach.imageKey].childImageSharp.fluid}
+                      alt={coach.name}
+                      className="w-full object-fill object-top"
+                      imgStyle={{ objectPosition: "50% 20%" }}
+                    />
+                  )}
+                </div>
+                <div className="md:w-2/3 md:mx-5 grid-cols-2 rounded overflow-hidden transition transform duration-150 ease-in-out">
+                  {coach.name && (
+                    <p className="tracking-tight text-sm font-bold text-yellow-500">
+                      {coach.name}
+                    </p>
+                  )}
+                  {coach.role && (
+                    <p className="tracking-tight text-sm font-medium text-yellow-700">
+                      {coach.role}
+                    </p>
+                  )}
+                  {coach.bio && (
+                    <div
+                      className="tracking-tight mt-2 text-sm text-grey-700 space-y-2"
+                      dangerouslySetInnerHTML={{ __html: coach.bio }}
+                    />
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}
@@ -134,3 +86,53 @@ const Coaches = () => {
 }
 
 export default Coaches
+
+// sarah: file(relativePath: { eq: "coaches/sarah.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 275, quality: 100) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// jess: file(relativePath: { eq: "coaches/jess.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 275, quality: 100) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// sam: file(relativePath: { eq: "coaches/sam.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 275, quality: 100) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// boo: file(relativePath: { eq: "coaches/boo.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 275, quality: 100) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// marie: file(relativePath: { eq: "coaches/marie.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 275, quality: 100) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// keith: file(relativePath: { eq: "coaches/keith.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 275, quality: 100) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
+// melissa: file(relativePath: { eq: "coaches/melissa.jpg" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 275, quality: 100) {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }
