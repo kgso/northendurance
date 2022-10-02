@@ -1,5 +1,6 @@
 import React from "react"
 
+import { formatPhone } from "../utils/Utils"
 import nav from "../assets/images/icons/nav-grid.svg"
 import emailImg from "../assets/images/icons/email.svg"
 import phoneImg from "../assets/images/icons/phone-grid.svg"
@@ -48,7 +49,7 @@ const Grid = () => {
                 Phone
               </dt>
               <dd className="mt-2 text-base text-gray-500">
-                <a href={phoneLink}>{phone}</a>
+                <a href={phoneLink}>{formatPhone(phone)}</a>
               </dd>
             </div>
           </div>

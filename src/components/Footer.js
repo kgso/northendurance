@@ -2,7 +2,7 @@ import React from "react"
 import Logo from "./Logo"
 import Social from "./Social"
 import Crossfit from "./Crossfit"
-
+import { formatPhone } from "../utils/Utils"
 import pinImg from "../assets/images/icons/pin.svg"
 import phoneImg from "../assets/images/icons/phone.svg"
 
@@ -41,7 +41,7 @@ const Footer = () => {
                   className="flex flex-row"
                 >
                   <img src={phoneImg} alt="phone icon" />
-                  <li className="text-sm  ml-3">{phone}</li>
+                  <li className="text-sm ml-3">{formatPhone(phone)}</li>
                 </a>
                 <li className="text-sm">Mon - Fri: 6:00 AM - 8:30 PM</li>
                 <li className="text-sm">Sat & Sun: 9:00 AM - 1:00 PM</li>
