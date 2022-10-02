@@ -17,8 +17,8 @@ const Home = ({ data }) => {
       <h2 hidden>The Home of West Street CrossFit</h2>
       <Hero />
       <Img fluid={data.file.childImageSharp.fluid} className="max-h-96" />
-      <SafetyNotice />
-      {/* <CTA /> */}
+      {/* <SafetyNotice /> */}
+      <CTA />
     </Layout>
   )
 }
