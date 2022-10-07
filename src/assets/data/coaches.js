@@ -9,9 +9,10 @@ export default [
   },
   {
     name: "CHARLES MARSHALL, CF-L2 Trainer",
-    role: "CrossFit Level 2 Trainer",
+    role: "CrossFit Level 2 Certificate",
     imageKey: "charles",
-    bio: "",
+    bio:
+      "<p>Hey, I’m Coach Charles! It didn’t take long after starting CrossFit in 2015 for me to realize this was what I wanted to do—which is why it also didn’t take me long to travel up to Montréal to earn my Level 1 Coaching Certificate.</p><p>A former football player at Mount Allison University, sports have been part of my life from a young age. A born and raised Haligonian, I’m happy to be able to give back to my community every day through sport. Whether it be teaching a new CrossFitter the mechanics of each movement or helping to perfect the technique of a seasoned athlete, watching members reach their goals is the highlight for me.</p><p>Outside the gym, I like paying homage to my Scottish routes watching rugby with a good scotch in hand. And some call me the CrossFit version of Ronald Ulysses Swanson, but I’m not sure why!</p>",
   },
   {
     name: "RHEA BLACK, CF-L1 Trainer",
@@ -27,6 +28,13 @@ export default [
     bio:
       "<p>Hi, I’m Nicole! I started doing CrossFit at CFK - now North Endurance - in 2014 after moving to Halifax to attend Dalhousie University. I quickly grew to love the community vibe of CrossFit, and always being challenged with a unique workout each day! I love barbell and strength training, and conquering my goals one step at a time to learn new skills.</p><p>In November of 2021 my interest had expanded to coaching, so I took my CF-L1 Certificate Course to further my knowledge of CrossFit, improve my own skills and technique, and others’ too!\nI’m originally from New Glasgow but now call Dartmouth home. Outside of CrossFit I am a full-time Pediatric Emergency Registered Nurse. I enjoy reading, being outdoors, and hanging out with my two cats - Luna and Gideon.</p>",
   },
+  {
+    name: "SARAH MORASH, CF-L1 Trainer",
+    role: "CrossFit Level 1 Certificate",
+    imageKey: "sarah",
+    bio:
+      "<p>Hey, I'm Coach Sarah! I started CrossFit in 2016 and knew right away it was the perfect form of fitness for me - constantly varied. What I didn't know at the time is what a huge impact it would have on my life. It's even how I met my husband! The community at North Endurance is one of a kind and I'm happy to be able to give back to a community who has given me so much.</p><p>When I'm not at North Endurance, I am a Web Team Lead at REDspace and focus on software development. I find coding is very similar to CrossFit - there are so many different skills that come up, and it's difficult to become proficient in all of them. As a coach at North Endurance I want to help our community become more proficient in all areas of CrossFit in order to meet and exceed their goals - and to have lots of fun doing it!</p>",
+  },
 ]
 
 // {
@@ -40,12 +48,6 @@ export default [
 //   role: "Trainer",
 //   imageKey: "kim",
 //   qualifications: "CF-L1",
-// },
-// {
-//   name: "Sarah Morash",
-//   role: "Trainer",
-//   qualifications: "CF-L1",
-//   imageKey: "sarah",
 // },
 // {
 //   name: "Matt (BOO) Smeltzer",
