@@ -34,6 +34,13 @@ const coachImageQuery = graphql`
         }
       }
     }
+    sarah: file(relativePath: { eq: "coaches/sarah.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 275, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
@@ -43,7 +50,7 @@ const Coaches = () => {
       {data => (
         <div className="my-10">
           <div id="product-marketing-sections" className="pt-8 gap-y-6">
-            <h2 className="text-base text-red-600 font-semibold tracking-wide uppercase">
+            <h2 className="text-lg text-red-600 font-semibold tracking-wide uppercase">
               Coaches
             </h2>
             {coaches.map(coach => (
@@ -60,18 +67,18 @@ const Coaches = () => {
                 </div>
                 <div className="md:w-2/3 md:mx-5 grid-cols-2 rounded overflow-hidden transition transform duration-150 ease-in-out">
                   {coach.name && (
-                    <p className="tracking-tight text-sm font-bold text-yellow-500">
+                    <p className="tracking-tight text-lg md:text-base font-bold text-yellow-500">
                       {coach.name}
                     </p>
                   )}
                   {coach.role && (
-                    <p className="tracking-tight text-sm font-medium text-yellow-700">
+                    <p className="text-base tracking-tight font-medium text-yellow-700">
                       {coach.role}
                     </p>
                   )}
                   {coach.bio && (
                     <div
-                      className="tracking-tight mt-2 text-sm text-grey-700 space-y-2"
+                      className="text-base tracking-tight mt-2 text-grey-700 space-y-2"
                       dangerouslySetInnerHTML={{ __html: coach.bio }}
                     />
                   )}
