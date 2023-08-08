@@ -1,6 +1,6 @@
 import React from "react"
 
-// const Cta = () => {
+// const CTA = () => {
 //   return (
 //     <div className="my-10">
 //       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
@@ -37,7 +37,7 @@ import React from "react"
 //   )
 // }
 
-const Cta = () => {
+const CTA = () => {
   return (
     <div className="my-10">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
@@ -63,4 +63,4 @@ const Cta = () => {
   )
 }
 
-export default Cta
+export default CTA
