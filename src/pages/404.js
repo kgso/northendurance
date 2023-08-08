@@ -1,13 +1,13 @@
 import React from "react"
 
 import Layout from "../components/Layout"
-import Seo from "../components/Seo"
+import SEO from "../components/SEO"
 import PageHero from "../components/PageHero"
 
 const NotFound = ({ data }) => {
   return (
     <Layout>
-      <Seo title="Page Not Found | North Endurance" />
+      <SEO title="Page Not Found | North Endurance" />
       <PageHero title="Page Not Found" />
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
         <div className="w-full">

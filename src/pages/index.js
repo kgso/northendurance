@@ -2,23 +2,23 @@ import React from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Cta from "../components/Cta"
+import CTA from "../components/CTA"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 
-import Seo from "../components/Seo"
+import SEO from "../components/SEO"
 // import SafetyNotice from "../components/SafetyNotice"
 
 const Home = ({ data }) => {
   return (
     <Layout>
-      <Seo title="Home | North Endurance" />
+      <SEO title="Home | North Endurance" />
       <h1 hidden>NORTH ENDURANCE</h1>
       <h2 hidden>The Home of West Street CrossFit</h2>
       <Hero />
       <Img fluid={data.file.childImageSharp.fluid} className="max-h-96" />
       {/* <SafetyNotice /> */}
-      <Cta />
+      <CTA />
     </Layout>
   )
 }
