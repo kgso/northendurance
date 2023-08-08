@@ -1,4 +1,4 @@
-export default [
+const Coaches = [
   {
     name: "ADAM NICHOLSON, Co-Owner / CF-L2 Trainer",
     role:
@@ -83,3 +83,5 @@ export default [
 //   role: "Owner",
 //   imageKey: "sam",
 // },
+
+export default Coaches

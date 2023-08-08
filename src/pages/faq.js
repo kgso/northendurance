@@ -1,13 +1,13 @@
 import React from "react"
-import CTA from "../components/CTA"
+import Cta from "../components/Cta"
 import Grid from "../components/Grid"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const Faq = () => {
   return (
     <Layout>
-      <SEO title="FAQ | North Endurance" />
+      <Seo title="FAQ | North Endurance" />
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
           Frequently Asked Questions
@@ -157,7 +157,7 @@ const Faq = () => {
           </div>
         </div>
         <Grid />
-        <CTA />
+        <Cta />
       </div>
     </Layout>
   )

@@ -3,14 +3,14 @@ import React from "react"
 import Grid from "../components/Grid"
 import Layout from "../components/Layout"
 import PageHero from "../components/PageHero"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const Contact = () => {
   const mapLink = `https://www.google.com/maps/embed/v1/place?key=${process.env.GATSBY_GOOGLE_API_KEY}&q=North+Endurance,Halifax+NS`
 
   return (
     <Layout>
-      <SEO title="Contact | North Endurance" />
+      <Seo title="Contact | North Endurance" />
       <PageHero title="Contact" />
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
         <Grid />

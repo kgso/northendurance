@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 import groupShot from "../assets/images/shots/group-shot-commons.jpg"
 
-const SEO = ({ title, data }) => {
+const Seo = ({ title, data }) => {
   return (
     <Helmet title={title}>
       <title>{title}</title>
@@ -53,4 +53,4 @@ export const HomePageQuery = graphql`
   }
 `
 
-export default SEO
+export default Seo

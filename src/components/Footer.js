@@ -9,8 +9,8 @@ import phoneImg from "../assets/images/icons/phone.svg"
 const Footer = () => {
   const phone = process.env.GATSBY_CONTACT_PHONE
   const phoneLink = "tel:" + process.env.GATSBY_CONTACT_PHONE
-  const mapLink =
-    "https://www.google.com/maps/place/5687+West+St,+Halifax,+NS+B3K+1H6/data=!4m2!3m1!1s0x4b5a217e388c53c7:0xf807ed041023fea2?sa=X&ved=2ahUKEwiskKjDhdbvAhXPRTABHU5zApoQ8gEwAHoECAYQAQ"
+  // const mapLink =
+  //   "https://www.google.com/maps/place/5687+West+St,+Halifax,+NS+B3K+1H6/data=!4m2!3m1!1s0x4b5a217e388c53c7:0xf807ed041023fea2?sa=X&ved=2ahUKEwiskKjDhdbvAhXPRTABHU5zApoQ8gEwAHoECAYQAQ"
 
   return (
     <footer>

@@ -16,6 +16,11 @@ svg.icon:hover {
   src: url("../assets/fonts/varsity_regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: aAmpunBang;
+  src: url("../assets/fonts/aAmpunBang.ttf") format("truetype");
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }

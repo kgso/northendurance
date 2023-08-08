@@ -2,7 +2,7 @@ import React from "react"
 
 import logo from "../assets/images/logos/northEndurancezlogo.png"
 import westStreet from "../assets/images/logos/westst_crossfit.png"
-import homeOf from "../assets/images/logos/homeof.png"
+// import homeOf from "../assets/images/logos/homeof.png"
 
 const Hero = () => (
   <>
