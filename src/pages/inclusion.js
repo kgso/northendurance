@@ -4,21 +4,22 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import PageHero from "../components/PageHero"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const Inclusion = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Inclusion | North Endurance" />
+      <Seo title="Inclusion | North Endurance" />
       <PageHero title="Inclusion" />
       <div className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8">
         <div
-          id="corporate-opportunities"
+          id="out-foundation"
           className="flex flex-col-reverse justify-between lg:flex-row-reverse lg:items-center lg:justify-between my-12"
         >
           <a
             href="https://theoutfoundation.org/"
             target="_blank"
+            rel="noreferrer"
             className="lg:w-3/12 w-2/4 m-auto h-full mt-4"
           >
             <Img

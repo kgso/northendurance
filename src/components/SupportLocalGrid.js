@@ -63,6 +63,7 @@ const SupportLocalGrid = () => {
                 <a
                   href="https://www.google.com/maps/place/Brickyard+Health/@44.6521349,-63.5818523,15z/data=!4m5!3m4!1s0x0:0xe06b9b194fa663c8!8m2!3d44.6521349!4d-63.5818523"
                   target="_blank"
+                  rel="noreferrer"
                   className="text-red-600 hover:text-gray-500"
                 >
                   100-2111 Maitland Street Halifax, Nova Scotia B3K 2Z8
@@ -87,6 +88,7 @@ const SupportLocalGrid = () => {
                 <a
                   href="http://www.brickyardhealth.com/"
                   target="_blank"
+                  rel="noreferrer"
                   className="text-red-600 hover:text-gray-500"
                 >
                   www.brickyardhealth.com
@@ -135,6 +137,7 @@ const SupportLocalGrid = () => {
                 <a
                   href="https://www.google.com/maps/place/2411+Agricola+St,+Halifax,+NS+B3K+4C1/@44.6532621,-63.5902048,17z/data=!3m1!4b1!4m5!3m4!1s0x4b5a217e480edef7:0x3239c3b41e9e0ddb!8m2!3d44.6532621!4d-63.5902048"
                   target="_blank"
+                  rel="noreferrer"
                   className="text-red-600 hover:text-gray-500"
                 >
                   2411 Agricola Street Halifax, Nova Scotia Canada B3K 4C1

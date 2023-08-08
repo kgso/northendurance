@@ -2,9 +2,17 @@ import React from "react"
 import Footer from "./Footer"
 import Header from "./Header"
 
-const Layout = ({ children, moreSpace = false }) => {
+const Layout = ({ children, moreSpace = false, background }) => {
   return (
-    <div className="relative bg-white overflow-hidden">
+    <div
+      className="relative bg-white overflow-hidden"
+      style={{
+        backgroundImage: background ? `url(${background})` : "",
+        backgroundSize: "contain",
+        backgroundRepeat: "repeat",
+        backgroundPosition: "",
+      }}
+    >
       <Header />
       <main
         className={`mx-auto ${

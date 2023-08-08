@@ -109,21 +109,14 @@ const Header = () => {
                 >
                   Introduction to CrossFit
                 </Link>
-                <Link
-                  to="/programs#crossfit-lite"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
-                >
-                  CrossFit Lite
-                </Link>
-                <Link
-                  to="/programs#corporate-opportunities"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
-                >
-                  Corporate Opportunities
-                </Link>
               </div>
             </li>
-
+            <Link
+              to="/crossfit-lite"
+              className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide z-20"
+            >
+              CrossFit Lite
+            </Link>
             <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide z-20">
               Contact
               <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60 z-10 bg-white">
@@ -271,24 +264,15 @@ const Header = () => {
                             Introduction to CrossFit
                           </span>
                         </Link>
-                        <Link
-                          to="/programs#crossfit-lite"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
-                            CrossFit Lite
-                          </span>
-                        </Link>
-                        <Link
-                          to="/programs#corporate-opportunities"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
-                            Corporate Opportunities
-                          </span>
-                        </Link>
                       </div>
                     </li>
+
+                    <Link
+                      to="/crossfit-lite"
+                      className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4 z-10"
+                    >
+                      CrossFit Lite
+                    </Link>
 
                     <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4">
                       Contact
