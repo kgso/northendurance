@@ -77,12 +77,12 @@ const Header = () => {
                 >
                   Schedule
                 </Link>
-                <Link
+                {/* <Link
                   to="/our-story"
                   className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
                 >
                   Our Story
-                </Link>
+                </Link> */}
                 <Link
                   to="/team"
                   className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
