@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import CrossFitLiteInfo from "../components/CrossFitLiteInfo"
+import CrossFitLiteInfo from "../components/Programs/CrossFitLiteInfo"
 import SEO from "../components/SEO"
 import background from "../assets/images/cfl/cfl_background.png"
 
