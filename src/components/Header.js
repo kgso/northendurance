@@ -4,17 +4,17 @@ import logo from "../assets/images/logos/homeLogo.png"
 import zenplanner from "../assets/images/logos/zenplannerlogo.png"
 
 const Header = () => {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [tabletOpen, setTabletOpen] = useState(false)
 
   return (
     <>
-      <div className="container justify-between m-auto items-center px-4 sm:px-6 lg:px-8 bg-white z-10 py-3">
+      <div className="justify-between m-auto items-center px-4 py-6 bg-white z-10 py-3">
         <nav
           className="relative flex items-center justify-between sm:h-10"
           aria-label="Global"
         >
           <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-            <div className="flex items-center justify-between w-full md:w-auto">
+            <div className="flex items-center justify-between w-full lg:w-auto">
               <Link to="/">
                 <img
                   className="h-8 w-auto"
@@ -22,13 +22,13 @@ const Header = () => {
                   alt="North Endurance Logo"
                 />
               </Link>
-              <div className="-mr-2 flex items-center md:hidden">
+              <div className="-mr-2 flex items-center lg:hidden">
                 <button
                   type="button"
                   className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                   id="main-menu"
                   aria-haspopup="true"
-                  onClick={() => setMobileOpen(!mobileOpen)}
+                  onClick={() => setTabletOpen(!tabletOpen)}
                 >
                   <span className="sr-only">Open main menu</span>
                   <svg
@@ -50,91 +50,88 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8 z-20">
-            <a
+          <div className="hidden lg:block lg:ml-10 lg:pr-4 lg:space-x-8 z-20">
+            {/* <a
               href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-wide relative z-20"
+              className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small relative z-20"
             >
               TODAY'S WOD
-            </a>
-            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide z-20">
+            </a> */}
+            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-small z-20">
               About
               <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-40 z-10 bg-white">
+                <a
+                  href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block">
+                    Today's WOD
+                  </span>
+                </a>
                 <Link
                   to="/schedule"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
                 >
                   Schedule
                 </Link>
-                <Link
+                {/* <Link
                   to="/our-story"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
                 >
                   Our Story
-                </Link>
+                </Link> */}
                 <Link
                   to="/team"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
                 >
                   Meet Our Team
                 </Link>
                 <Link
                   to="/inclusion"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
                 >
                   Inclusion
                 </Link>
               </div>
             </li>
-            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide z-20">
-              Programs
-              <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-80 z-10 bg-white">
-                <Link
-                  to="/programs#west-street-crossfit"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
-                >
-                  West Street CrossFit
-                </Link>
-                <Link
-                  to="/programs#personal-training"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
-                >
-                  Personal Training
-                </Link>
-                <Link
-                  to="/programs#introduction-to-crossfit"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
-                >
-                  Introduction to CrossFit
-                </Link>
-              </div>
-            </li>
+            <Link
+              to="/west-street-crossfit"
+              className="dropdown inline-block relative text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small z-20"
+            >
+              West Street CrossFit
+            </Link>
             <Link
               to="/crossfit-lite"
-              className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide z-20"
+              className="dropdown inline-block relative text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small z-20"
             >
               CrossFit Lite
             </Link>
-            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-wide z-20">
+            <Link
+              to="/personal-training"
+              className="dropdown inline-block relative text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small z-20"
+            >
+              Personal Training
+            </Link>
+            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-small z-20">
               Contact
               <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60 z-10 bg-white">
                 <Link
                   to="/contact"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
                 >
                   Contact Us
                 </Link>
                 <Link
                   to="/support-local"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-wide block"
+                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
                 >
                   #SupportLocal
                 </Link>
               </div>
             </li>
-
             <a
               href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"
               target="_blank"
@@ -149,8 +146,8 @@ const Header = () => {
             </a>
           </div>
         </nav>
-        {mobileOpen && (
-          <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-10">
+        {tabletOpen && (
+          <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden z-10">
             <div className="rounded-lg shadow-lg ring-1 ring-red-700 ring-opacity-5 bg-white divide-y-2">
               <div className="pt-4 pl-2 pr-3 pb-3">
                 <div className="flex items-center justify-between">
@@ -163,7 +160,7 @@ const Header = () => {
                   </Link>
                   <div className="-mr-2">
                     <button
-                      onClick={() => setMobileOpen(!mobileOpen)}
+                      onClick={() => setTabletOpen(!tabletOpen)}
                       type="button"
                       className="bg-white rounded-md p-2 inline-flex items-center justify-center text-grey-400 hover:text-grey-500 hover:bg-grey-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-grey-500"
                     >
@@ -188,41 +185,51 @@ const Header = () => {
                 </div>
                 <div className="mt-6">
                   <nav className="grid gap-y-2">
-                    <a
+                    {/* <a
                       href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                     >
-                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2">
+                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2">
                         Today's WOD
                       </span>
-                    </a>
+                    </a> */}
 
-                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4">
+                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4">
                       About
                       <div className="top-4 h-auto flex flex-col pt-4">
+                        <a
+                          href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
+                        >
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2">
+                            Today's WOD
+                          </span>
+                        </a>
                         <Link
                           to="/schedule"
                           className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                         >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
                             Schedule
                           </span>
                         </Link>
-                        <Link
+                        {/* <Link
                           to="/our-story"
                           className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                         >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
                             Our Story
                           </span>
-                        </Link>
+                        </Link> */}
                         <Link
                           to="/team"
                           className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                         >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
                             Meet Our Team
                           </span>
                         </Link>
@@ -230,58 +237,42 @@ const Header = () => {
                           to="/inclusion"
                           className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                         >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
                             Inclusion
                           </span>
                         </Link>
                       </div>
                     </li>
 
-                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4 z-10">
-                      Programs
-                      <div className="top-4 h-auto flex flex-col pt-4 z-10">
-                        <Link
-                          to="/programs#west-street-crossfit"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
-                            West Street CrossFit
-                          </span>
-                        </Link>
-                        <Link
-                          to="/programs#personal-training"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
-                            Personal Training
-                          </span>
-                        </Link>
-                        <Link
-                          to="/programs#introduction-to-crossfit"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
-                            Introduction to CrossFit
-                          </span>
-                        </Link>
-                      </div>
-                    </li>
+                    <Link
+                      to="/west-street-crossfit"
+                      className="-m-1 p-2 inline-block relative text-grey-700 hover:bg-gray-100 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4 z-10"
+                    >
+                      West Street CrossFit
+                    </Link>
 
                     <Link
                       to="/crossfit-lite"
-                      className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4 z-10"
+                      className="-m-1 p-2 inline-block relative text-grey-700 hover:bg-gray-100 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4 z-10"
                     >
                       CrossFit Lite
                     </Link>
 
-                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-4">
+                    <Link
+                      to="/personal-training"
+                      className="-m-1 p-2 inline-block relative text-grey-700 hover:bg-gray-100 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4 z-10"
+                    >
+                      Personal Training
+                    </Link>
+
+                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4">
                       Contact
                       <div className="top-4 h-auto flex flex-col pt-4">
                         <Link
                           to="/contact"
                           className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                         >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
                             Contact Us
                           </span>
                         </Link>
@@ -289,7 +280,7 @@ const Header = () => {
                           to="/support-local"
                           className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
                         >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2 py-1">
+                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
                             #SupportLocal
                           </span>
                         </Link>
@@ -302,7 +293,7 @@ const Header = () => {
                       rel="noopener noreferrer"
                       className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100 z-20"
                     >
-                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-wide px-2">
+                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2">
                         ZenPlanner
                       </span>
                     </a>

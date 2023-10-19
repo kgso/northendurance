@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { graphql, StaticQuery } from "gatsby"
 
-const ProgramList = () => {
+const WestStreetCrossFit = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -25,32 +25,9 @@ const ProgramList = () => {
               }
             }
           }
-          personalTraining: file(
-            relativePath: { eq: "shots/personal_training.jpg" }
-          ) {
-            childImageSharp {
-              fluid(maxWidth: 1000, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
           crossfit: file(relativePath: { eq: "shots/weststreet_cf.jpg" }) {
             childImageSharp {
               fluid(maxWidth: 1000, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          cf_lite: file(relativePath: { eq: "shots/sam_henry.jpeg" }) {
-            childImageSharp {
-              fluid(maxWidth: 350, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          corporate: file(relativePath: { eq: "shots/corporate.jpg" }) {
-            childImageSharp {
-              fluid(maxWidth: 350, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -65,10 +42,7 @@ const ProgramList = () => {
             id="west-street-crossfit"
             class="my-12 flex flex-col lg:flex-row lg:justify-between lg:items-center"
           >
-            <div className="w-full lg:w-8/12">
-              <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                West Street CrossFit
-              </h2>
+            <div className="w-full lg:w-7/12">
               <p className="text-lg text-gray-500">
                 Are you looking for a change to your current workout program?
                 Have you hit a plateau because of your current routine? Whether
@@ -100,7 +74,7 @@ const ProgramList = () => {
                 athlete to help you get better.
               </p>
             </div>
-            <div class="lg:w-3/12 h-full w-full mt-4">
+            <div class="lg:w-4/12 h-full w-full mt-4">
               <Img
                 className="rounded-xl w-2/4 m-auto md:w-full md:max-w-lg "
                 fluid={data.crossfit.childImageSharp.fluid}
@@ -109,101 +83,12 @@ const ProgramList = () => {
             </div>
           </div>
 
-          {/* Personal Training */}
-          <div
-            id="personal-training"
-            class="my-12 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center"
-          >
-            <div class="lg:w-3/12 h-full w-full mt-4">
-              <Img
-                className="rounded-xl w-2/4 m-auto md:w-full md:max-w-lg "
-                fluid={data.personalTraining.childImageSharp.fluid}
-                alt="Personal Training"
-              />
-            </div>
-
-            <div className="w-full lg:w-8/12">
-              <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-                Personal Training
-              </h2>
-              <p class="mt-4 text-lg text-gray-500">
-                Do you have a specific goal? Increase strength, develop your
-                skills in a specfic discipline - weightlifting, gymnastics, or
-                conditioning? Our personal training program will be catered 100%
-                towards your development to help bring you to and exceed your
-                goal!
-              </p>
-              <p class="mt-4 text-lg text-gray-500">
-                Have you struggled to find the motivation to commit to an
-                exercise program? Our trainers will help keep you accountable
-                and stay motivated for the long run. It isn’t just about putting
-                in the work, it’s about building confidence and making fitness a
-                part of your lifestyle!
-              </p>
-              <p class="mt-4 text-lg text-gray-500">
-                Our personal training program is led by Bernie Thibeault
-                (CF-L1). If you’re interested in a program, there are two
-                options to help get you started:
-              </p>
-              <ol className="mt-6 space-y-4">
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    class="flex-shrink-0 h-5 w-5 text-green-500"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  <span class="text-base text-gray-500">
-                    Personal training is available in 30 or 60 minute blocks.
-                    The first step is to have a discussion with your trainer and
-                    talk about what sort of training plan is right for you and
-                    your goals. Your trainer will then begin to build a program
-                    for you and schedule your sessions as determined by you. The
-                    individualized attention will help you train safely and
-                    develop your skills at an accelerated rate compared to an
-                    independent program.
-                  </span>
-                </li>
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    class="flex-shrink-0 h-5 w-5 text-green-500"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  <span class="text-base text-gray-500">
-                    Customized online or distance programming is meant for
-                    athletes who have already been training for a period of time
-                    but are looking to take their training to the next level or
-                    have peaked with their current workout routine. Sometimes
-                    all it takes is a fresh lens to spice up your training and
-                    take your fitness to new heights!
-                  </span>
-                </li>
-              </ol>
-            </div>
-          </div>
-
           {/* Introduction To CrossFit */}
           <div
             id="introduction-to-crossfit"
             class="my-12 flex flex-col lg:justify-between lg:flex-row lg:items-center"
           >
-            <div className="w-full lg:w-8/12">
+            <div className="w-full lg:w-7/12">
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 Introduction to CrossFit
               </h2>
@@ -233,7 +118,7 @@ const ProgramList = () => {
                 !
               </p>
             </div>
-            <div class="w-full lg:w-3/12 h-full mt-4">
+            <div class="w-full lg:w-4/12 h-full mt-4">
               <Img
                 className="rounded-xl w-2/4 m-auto md:w-full md:max-w-lg "
                 fluid={data.rightStart.childImageSharp.fluid}
@@ -247,4 +132,4 @@ const ProgramList = () => {
   )
 }
 
-export default ProgramList
+export default WestStreetCrossFit
