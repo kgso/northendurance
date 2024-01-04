@@ -52,7 +52,7 @@ const Header = () => {
           </div>
           <div className="hidden lg:block lg:ml-10 lg:pr-4 lg:space-x-8 z-20">
             {/* <a
-              href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
+              href="https://northendurance.sites.zenplanner.com/leaderboard-day.cfm"
               target="_blank"
               rel="noopener noreferrer"
               className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small relative z-20"
@@ -63,7 +63,7 @@ const Header = () => {
               About
               <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-40 z-10 bg-white">
                 <a
-                  href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
+                  href="https://northendurance.sites.zenplanner.com/leaderboard-day.cfm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -133,7 +133,7 @@ const Header = () => {
               </div>
             </li>
             <a
-              href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"
+              href="https://northendurance.sites.zenplanner.com/login.cfm"
               target="_blank"
               rel="noopener noreferrer"
               className="z-50 relative"
@@ -186,7 +186,7 @@ const Header = () => {
                 <div className="mt-6">
                   <nav className="grid gap-y-2">
                     {/* <a
-                      href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
+                      href="https://northendurance.sites.zenplanner.com/leaderboard-day.cfm"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
@@ -200,7 +200,7 @@ const Header = () => {
                       About
                       <div className="top-4 h-auto flex flex-col pt-4">
                         <a
-                          href="https://crossfitkineticsca.sites.zenplanner.com/leaderboard-day.cfm"
+                          href="https://northendurance.sites.zenplanner.com/leaderboard-day.cfm"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
@@ -288,7 +288,7 @@ const Header = () => {
                     </li>
 
                     <a
-                      href="https://crossfitkineticsca.sites.zenplanner.com/login.cfm"
+                      href="https://northendurance.sites.zenplanner.com/login.cfm"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100 z-20"
