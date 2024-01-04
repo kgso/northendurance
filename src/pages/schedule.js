@@ -14,10 +14,10 @@ const Schedule = () => {
             id="idZenPlannerFrame"
             style={{ width: "100%", height: "500px" }}
             title="ZenPlanner North Endurance Schedule"
-            src="https://crossfitkineticsca.zenplanner.com/zenplanner/portal/calendar.cfm?frame=true&amp;VIEW=week"
+            src="https://northendurance.zenplanner.com/zenplanner/portal/calendar.cfm?frame=true&amp;VIEW=week"
             frameborder="0"
           ></iframe>
-          <script src="https://crossfitkineticsca.zenplanner.com/zenplanner/skin/js/resize.js"></script>
+          <script src="https://northendurance.zenplanner.com/zenplanner/skin/js/resize.js"></script>
         </div>
       </div>
     </Layout>
