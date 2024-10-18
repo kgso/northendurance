@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 import groupShot from "../assets/images/shots/group-shot-commons.jpg"
 
-const Seo = ({ title, data }) => {
+const Seo = ({ title }) => {
   return (
     <Helmet title={title}>
       <title>{title}</title>
@@ -17,11 +17,11 @@ const Seo = ({ title, data }) => {
       />
       <meta
         name="description"
-        content="Welcome to North Endurance - home of West Street CrossFit! As the COVID-19 pandemic continues to affect our day to day lives, the health and safety of our athletes and community has never been more important to us. We are currently operating at a limited capacity as we work to keep North Endurance clean and safe! If you are interested in getting started with us, or you have any questions, please contact us!"
+        content="Welcome to North Endurance, where we find strength in community. We specialize in group fitness, strength training, and personalized coaching, offering a supportive and energetic environment to help you reach your goals. Get started with us today!"
       />
       <meta
         name="keywords"
-        content="North Endurance, Halifax, CrossFit, Gym, Fitness, Community, Halifax CrossFit, North Endurance Halifax, CrossFit Kinetics"
+        content="North Endurance, Halifax, CrossFit, Gym, Fitness, Group Fitness, Strength Training, Personal Coaching, Community, Halifax CrossFit, North Endurance Halifax, CrossFit Kinetics"
       />
       <meta
         property="og:url"
@@ -33,7 +33,7 @@ const Seo = ({ title, data }) => {
       <meta property="og:title" content={title} />
       <meta
         property="og:description"
-        content="Welcome to North Endurance - home of West Street CrossFit! As the COVID-19 pandemic continues to affect our day to day lives, the health and safety of our athletes and community has never been more important to us. We are currently operating at a limited capacity as we work to keep North Endurance clean and safe! If you are interested in getting started with us, or you have any questions, please contact us!"
+        content="Welcome to North Endurance, where we find strength in community. We specialize in group fitness, strength training, and personalized coaching, offering a supportive and energetic environment to help you reach your goals. Get started with us today!"
       />
       <meta property="og:image" content={groupShot} />
       <meta property="og:site_name" content="North Endurance" />
