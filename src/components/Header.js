@@ -51,14 +51,6 @@ const Header = () => {
             </div>
           </div>
           <div className="hidden lg:block lg:ml-10 lg:pr-4 lg:space-x-8 z-20">
-            {/* <a
-              href="https://northendurance.sites.zenplanner.com/leaderboard-day.cfm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small relative z-20"
-            >
-              TODAY'S WOD
-            </a> */}
             <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-small z-20">
               About
               <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-40 z-10 bg-white">
@@ -77,12 +69,6 @@ const Header = () => {
                 >
                   Schedule
                 </Link>
-                {/* <Link
-                  to="/our-story"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
-                >
-                  Our Story
-                </Link> */}
                 <Link
                   to="/team"
                   className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
@@ -98,16 +84,16 @@ const Header = () => {
               </div>
             </li>
             <Link
-              to="/west-street-crossfit"
+              to="/group-fitness"
               className="dropdown inline-block relative text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small z-20"
             >
-              West Street CrossFit
+              Group Fitness
             </Link>
             <Link
-              to="/crossfit-lite"
+              to="/lite-fitness"
               className="dropdown inline-block relative text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small z-20"
             >
-              CrossFit Lite
+              Lite Fitness
             </Link>
             <Link
               to="/personal-training"
@@ -245,17 +231,17 @@ const Header = () => {
                     </li>
 
                     <Link
-                      to="/west-street-crossfit"
+                      to="/group-fitness"
                       className="-m-1 p-2 inline-block relative text-grey-700 hover:bg-gray-100 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4 z-10"
                     >
-                      West Street CrossFit
+                      Group Fitness
                     </Link>
 
                     <Link
-                      to="/crossfit-lite"
+                      to="/lite-fitness"
                       className="-m-1 p-2 inline-block relative text-grey-700 hover:bg-gray-100 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4 z-10"
                     >
-                      CrossFit Lite
+                      Lite Fitness
                     </Link>
 
                     <Link

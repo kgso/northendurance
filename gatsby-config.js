@@ -5,11 +5,10 @@ require("dotenv").config({
 })
 
 module.exports = {
-  pathPrefix: "/pizza",
   siteMetadata: {
     title: `North Endurance`,
     siteUrl: `https://northendurance.ca`,
-    description: `North Endurance, home of West Street Crossfit`,
+    description: `North Endurance`,
     twitter: "@northendurance",
   },
   plugins: [
