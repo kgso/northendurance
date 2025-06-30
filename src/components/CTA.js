@@ -1,66 +1,45 @@
 import React from "react"
+import { formatPhone } from "../utils/Utils"
 
-// const CTA = () => {
-//   return (
-//     <div className="my-10">
-//       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-//         <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-//           <span className="block text-red-500">Ready to get started?</span>
-//           <span className="block text-gray sm:text-xl">
-//             Click to schedule your free class or arrange a time to chat! We'd be
-//             happy to talk with you about our membership options, learn about
-//             you, and what brought you here today!
-//           </span>
-//         </h2>
-//         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-//           <div className="inline-flex rounded-md shadow">
-//             <a
-//               className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:text-gray-500"
-//               href="mailto:info@northendurance.ca"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               Get started
-//             </a>
-//           </div>
-//           {/* <div className="ml-3 inline-flex rounded-md shadow">
-//             <a
-//               href="#"
-//               className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:text-gray-500"
-//             >
-//               Learn more
-//             </a>
-//           </div> */}
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
+const ContactCTA = () => {
+  const phone = process.env.GATSBY_CONTACT_PHONE
+  const email = process.env.GATSBY_CONTACT_EMAIL
+  const phoneLink = "tel:" + phone
+  const emailLink = "mailto:" + email
+  const dropInLink = "#" // update with real link later
 
-const CTA = () => {
   return (
-    <div className="my-10">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-        <p className="tracking-tight sm:text-xl text-center">
-          <span className="font-extrabold sm:text-xl">
-            Ready to get started?
-          </span>
-          &nbsp;Click&nbsp;
-          <a
-            className="text-grey-700 hover:text-gray-300 cursor-pointer"
-            href="mailto:info@northendurance.ca"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            here
-          </a>{" "}
-          to schedule your free class or arrange a time to chat! We'd be happy
-          to talk with you about our membership options, learn about you, and
-          what brought you here today!
-        </p>
+    <section className="bg-white py-12 px-6 text-center rounded-lg shadow-md max-w-4xl mx-auto mt-16">
+      <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+        Ready to Get Started?
+      </h2>
+      <p className="text-gray-700 mb-8">
+        Whether you're new to group fitness or just new to the area — let's
+        connect.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href={dropInLink}
+          className="bg-blue-500 hover:bg-blue-300 text-white px-6 py-3 rounded-lg font-medium transition"
+        >
+          Schedule a Drop-In
+        </a>
+        <a
+          href={phoneLink}
+          className="bg-yellow-500 hover:bg-yellow-300 text-white px-6 py-3 rounded-lg font-medium transition"
+        >
+          Call Us
+        </a>
+        <a
+          href={emailLink}
+          className="bg-green-500 hover:bg-green-300 text-white px-6 py-3 rounded-lg font-medium transition"
+        >
+          Send Us a Message
+        </a>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default CTA
+export default ContactCTA

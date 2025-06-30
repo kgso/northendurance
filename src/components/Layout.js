@@ -1,27 +1,15 @@
 import React from "react"
+
 import Footer from "./Footer"
 import Header from "./Header"
+import Content from "./Content"
 
-const Layout = ({ children, moreSpace = false, background }) => {
+const Layout = ({ children, moreSpace = false }) => {
   return (
-    <div
-      className="relative bg-white overflow-hidden"
-      style={{
-        backgroundImage: background ? `url(${background})` : "",
-        backgroundSize: "contain",
-        backgroundRepeat: "repeat",
-        backgroundPosition: "",
-      }}
-    >
+    <div className="relative bg-white overflow-hidden flex flex-col min-h-screen">
       <Header />
-      <main
-        className={`mx-auto ${
-          moreSpace ? "max-w-screen-2xl" : "max-w-7xl"
-        } px-4 sm:mt-6 sm:px-6 md:mt-8 lg:mt-10 lg:px-8 xl:mt-12`}
-      >
-        <div className="main">{children}</div>
-      </main>
-      <Footer></Footer>
+      <Content />
+      <Footer />
     </div>
   )
 }
