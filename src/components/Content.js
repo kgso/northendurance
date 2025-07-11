@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Coaches from "./Coaches"
 import Schedule from "./Schedule"
@@ -8,29 +9,18 @@ import LinkCTA from "./LinkCTA"
 
 const Content = () => {
   const sections = [
-    // {
-    //   id: "about",
-    //   title: "About",
-    //   component: (
-    //     <p>
-    //       This is the About section. Add information here about the gym's
-    //       mission, values, and community.
-    //     </p>
-    //   ),
-    // },
     {
-      id: "schedule",
-      title: "Schedule",
-      component: <Schedule />,
-    },
-    {
-      id: "team",
-      title: "Team",
-      component: <Coaches />,
-    },
-    {
-      id: "group-classes",
-      title: "Group Classes",
+      id: "functionally-fit",
+      title: "Functionally F!t",
+      image: (
+        <StaticImage
+          src="../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_001.jpg"
+          alt="Hyrox Training"
+          placeholder="blurred"
+          layout="constrained"
+          className="rounded shadow-md w-full h-auto"
+        />
+      ),
       component: (
         <>
           <p>
@@ -62,8 +52,17 @@ const Content = () => {
       ),
     },
     {
-      id: "functionally-fit",
-      title: "Functionally F!t",
+      id: "functionally-fit-lite",
+      title: "Functionally F!t L!te",
+      image: (
+        <StaticImage
+          src="../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_057.jpg"
+          alt="Hyrox Training"
+          placeholder="blurred"
+          layout="constrained"
+          className="rounded shadow-md w-full h-auto"
+        />
+      ),
       component: (
         <>
           <p>
@@ -93,6 +92,15 @@ const Content = () => {
     {
       id: "hyrox",
       title: "Hyrox",
+      image: (
+        <StaticImage
+          src="../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_113.jpg"
+          alt="Hyrox Training"
+          placeholder="blurred"
+          layout="constrained"
+          className="rounded shadow-md w-full h-auto"
+        />
+      ),
       component: (
         <>
           <p>
@@ -123,6 +131,15 @@ const Content = () => {
     {
       id: "weightlifting",
       title: "Weightlifting",
+      image: (
+        <StaticImage
+          src="../assets/images/shots/promo_photos_part_2_north_endurance_photo_credit_stoometzphoto_229.jpg"
+          alt="Hyrox Training"
+          placeholder="blurred"
+          layout="constrained"
+          className="rounded shadow-md w-full h-auto"
+        />
+      ),
       component: (
         <>
           <p>
@@ -237,6 +254,16 @@ const Content = () => {
       ),
     },
     {
+      id: "schedule",
+      title: "Schedule",
+      component: <Schedule />,
+    },
+    {
+      id: "team",
+      title: "Team",
+      component: <Coaches />,
+    },
+    {
       id: "contact",
       component: <CTA />,
       wrapperClass: "max-w-3xl", // smaller container for contact
@@ -249,28 +276,81 @@ const Content = () => {
       <Hero />
 
       {/* Dynamic Sections */}
-      {sections.map((section, index) => (
-        <section
-          key={section.id}
-          id={section.id}
-          className={`py-20 px-4 lg:px-12 ${
-            index % 2 === 0 ? "bg-gray-50" : "bg-white"
-          }`}
-        >
+      {sections.map((section, index) => {
+        const isEven = index % 2 === 0
+        const hasImage = !!section.image
+
+        const Content = (
           <div
-            className={`${
-              section.wrapperClass || "max-w-5xl"
-            } mx-auto text-center`}
+            className={`text-gray-700 text-lg space-y-4 text-left w-full ${
+              hasImage ? "lg:w-1/2" : ""
+            }`}
           >
-            <h2 className="text-3xl font-semibold uppercase tracking-widest mb-4">
-              {section.title}
-            </h2>
-            <div className="text-gray-700 text-lg space-y-4 text-left">
-              {section.component}
-            </div>
+            {section.title && (
+              <h2 className="text-3xl font-semibold uppercase tracking-widest mb-4 text-center lg:text-left">
+                {section.title}
+              </h2>
+            )}
+            {section.component}
           </div>
-        </section>
-      ))}
+        )
+
+        const Image = hasImage && (
+          <div className="w-full lg:w-1/2 mb-6 lg:mb-0">{section.image}</div>
+        )
+
+        return (
+          <section
+            key={section.id}
+            id={section.id}
+            className={`py-20 px-4 lg:px-12 ${
+              isEven ? "bg-gray-50" : "bg-white"
+            }`}
+          >
+            <div className={`${section.wrapperClass || "max-w-6xl"} mx-auto`}>
+              {/* Title always left aligned and above */}
+              {section.title && (
+                <h2 className="text-3xl font-semibold uppercase tracking-widest mb-8 text-left">
+                  {section.title}
+                </h2>
+              )}
+
+              {/* Flex container for image and content */}
+              <div
+                className={`flex flex-col lg:flex-row ${
+                  hasImage ? "gap-8" : ""
+                } items-center lg:items-start justify-center`}
+              >
+                {hasImage ? (
+                  isEven ? (
+                    <>
+                      <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
+                        {section.image}
+                      </div>
+                      <div className="text-gray-700 text-lg space-y-4 text-left w-full lg:w-1/2">
+                        {section.component}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="text-gray-700 text-lg space-y-4 text-left w-full lg:w-1/2">
+                        {section.component}
+                      </div>
+                      <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
+                        {section.image}
+                      </div>
+                    </>
+                  )
+                ) : (
+                  <div className="text-gray-700 text-lg space-y-4 text-left w-full">
+                    {section.component}
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        )
+      })}
     </>
   )
 }

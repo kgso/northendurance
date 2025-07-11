@@ -1,6 +1,6 @@
 import React from "react"
 
-const Social = () => {
+const Social = ({ className = "" }) => {
   const phoneLink = "tel:" + process.env.GATSBY_CONTACT_PHONE
   const emailLink = "mailto:" + process.env.GATSBY_CONTACT_EMAIL
   const facebookLink = "https://www.facebook.com/northendurancehfx"
@@ -34,7 +34,7 @@ const Social = () => {
   ]
 
   return (
-    <div className="flex flex-row justify-center items-center">
+    <div className={`grid grid-cols-2 gap-4 ${className}`}>
       {icons.map(({ title, href, path }) => (
         <a
           key={title}

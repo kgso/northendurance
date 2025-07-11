@@ -69,14 +69,11 @@ const Hero = () => {
         style={{ position: "absolute" }}
       />
 
-      {/* Global dark overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
-
       {/* Gradient mask */}
       <div
         className="absolute inset-0 z-20 pointer-events-none"
         style={{
-          background: `radial-gradient(circle at bottom right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 25%)`,
+          background: `radial-gradient(circle 1000px at bottom right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%)`,
         }}
       />
 
@@ -84,8 +81,8 @@ const Hero = () => {
       <StaticImage
         src="../assets/images/logos/north_endurance_white_red_small.png"
         alt="North Endurance Logo"
-        className="absolute bottom-6 right-6 opacity-0 animate-fade-in z-30"
-        style={{ width: "400px", position: "absolute" }}
+        className="absolute bottom-6 right-6 opacity-0 animate-fade-in z-30 w-[300px] md:w-[35%]"
+        style={{ position: "absolute" }}
       />
     </section>
   )

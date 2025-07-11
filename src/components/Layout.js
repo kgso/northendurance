@@ -4,12 +4,23 @@ import Footer from "./Footer"
 import Header from "./Header"
 import Content from "./Content"
 
-const Layout = ({ children, moreSpace = false }) => {
+const Layout = () => {
   return (
-    <div className="relative bg-white overflow-hidden flex flex-col min-h-screen">
+    <div className="relative bg-white overflow-hidden flex flex-col lg:h-screen">
+      {/* Fixed header */}
       <Header />
-      <Content />
-      <Footer />
+
+      {/* Scrollable content area between header and sticky footer */}
+      <div className="flex-grow overflow-y-auto">
+        <main>
+          <Content />
+        </main>
+      </div>
+
+      {/* Sticky footer only on large screens */}
+      <div className="lg:sticky lg:bottom-0 lg:z-30">
+        <Footer />
+      </div>
     </div>
   )
 }

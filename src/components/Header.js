@@ -1,23 +1,26 @@
 import React, { useState } from "react"
-import logo from "../assets/images/logos/homeLogo.png"
 
 const Header = () => {
   const [tabletOpen, setTabletOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState(null)
 
   const navGroups = [
+    { label: "Home", items: [{ label: "Home", href: "#top" }] },
     {
       label: "About",
       items: [
         { label: "Team", href: "#team" },
-        { label: "Schedule", href: "#schedule" }, // optional
+        { label: "Schedule", href: "#schedule" },
+        { label: "Contact", href: "#contact" },
       ],
     },
     {
       label: "Classes",
       items: [
         { label: "Functionally F!t", href: "#functionally-fit" },
+        { label: "Functionally F!t L!te", href: "#functionally-fit-lite" },
         { label: "Hyrox", href: "#hyrox" },
+        { label: "Weightlifting", href: "#weightlifting" },
       ],
     },
     {
@@ -27,17 +30,19 @@ const Header = () => {
         { label: "Team Training", href: "#team-training" },
       ],
     },
-    {
-      label: "Contact",
-      items: [{ label: "Contact", href: "#contact" }],
-    },
   ]
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white z-50 px-4 py-6 shadow">
       <nav className="flex items-center justify-between">
-        <a href="#top">
-          <img className="h-8 w-auto" src={logo} alt="North Endurance Logo" />
+        {/* Sign Up Now CTA replaces Logo */}
+        <a
+          href="https://northendurance.sites.zenplanner.com/sign-up-now.cfm"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 rounded-xl bg-[rgb(159,42,49)] text-white font-bold text-sm uppercase tracking-wide shadow-md hover:bg-[rgb(130,30,36)] hover:text-[rgb(255,235,85)] hover:shadow-lg transition-all duration-300 ease-in-out"
+        >
+          Sign Up Now!
         </a>
 
         {/* Mobile Hamburger */}
@@ -66,15 +71,12 @@ const Header = () => {
         <div className="hidden lg:flex space-x-8 text-base font-nav text-[#9f2a31]">
           {navGroups.map(group => (
             <div key={group.label} className="relative group">
-              {/* Nav button */}
               <button className="cursor-pointer text-[#9f2a31] hover:opacity-70">
                 {group.label}
               </button>
 
-              {/* Dropdown for groups with more than one item */}
               {group.items.length > 1 && (
                 <div className="absolute left-0 top-full w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-30">
-                  {/* Optional: Add a small transparent padding at the top to catch mouse movement */}
                   <div className="pt-2">
                     {group.items.map(item => (
                       <a
@@ -89,7 +91,6 @@ const Header = () => {
                 </div>
               )}
 
-              {/* Single-link groups rendered as links */}
               {group.items.length === 1 && (
                 <a
                   href={group.items[0].href}
