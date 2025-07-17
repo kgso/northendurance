@@ -34,11 +34,11 @@ const Social = ({ className = "" }) => {
   ]
 
   return (
-    <div className={`grid grid-cols-2 gap-4 ${className}`}>
+    <div className={`grid grid-cols-2 gap-2 ${className}`}>
       {icons.map(({ title, href, path }) => (
         <a
           key={title}
-          className="p-2 group"
+          className="group"
           target="_blank"
           rel="noopener noreferrer"
           href={href}

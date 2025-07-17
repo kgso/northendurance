@@ -305,7 +305,7 @@ const Content = () => {
             id={section.id}
             className={`py-20 px-4 lg:px-12 ${
               isEven ? "bg-gray-50" : "bg-white"
-            }`}
+            } scroll-mt-20`}
           >
             <div className={`${section.wrapperClass || "max-w-6xl"} mx-auto`}>
               {/* Title always left aligned and above */}
