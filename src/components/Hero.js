@@ -1,6 +1,6 @@
+import React, { useEffect, useState } from "react"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
-import React, { useMemo } from "react"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -38,7 +38,12 @@ const Hero = () => {
         }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            quality: 100
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }
@@ -51,39 +56,75 @@ const Hero = () => {
     getImage(data.hero4),
   ]
 
-  const selectedHeroImage = useMemo(() => {
+  const [selectedHeroImage, setSelectedHeroImage] = useState(null)
+  const [opacity, setOpacity] = useState(1)
+
+  useEffect(() => {
+    // Pick one random image once on mount
     const index = Math.floor(Math.random() * heroImages.length)
-    return heroImages[index]
-  }, [heroImages])
+    setSelectedHeroImage(heroImages[index])
+  }, [])
+
+  useEffect(() => {
+    // Scroll fade effect
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      const fadeStart = 0
+      const fadeEnd = 300
+
+      if (scrollTop <= fadeStart) {
+        setOpacity(1)
+      } else if (scrollTop >= fadeEnd) {
+        setOpacity(0)
+      } else {
+        setOpacity(1 - (scrollTop - fadeStart) / (fadeEnd - fadeStart))
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <section
-      id="top"
-      className="relative w-full h-[70vh] lg:h-[90vh] overflow-hidden"
+      className="relative w-full bg-white overflow-hidden transition-opacity duration-500 ease-out h-[60vh] lg:h-[92vh]"
+      style={{ opacity }}
     >
-      {/* Optimized hero image fills the section */}
-      <GatsbyImage
-        image={selectedHeroImage}
-        alt="Hero Background"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ position: "absolute" }}
-      />
+      {/* Only render image when loaded */}
+      {selectedHeroImage && (
+        <GatsbyImage
+          image={selectedHeroImage}
+          alt="Hero Background"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+      )}
 
-      {/* Gradient mask */}
-      <div
-        className="absolute inset-0 z-20 pointer-events-none"
-        style={{
-          background: `radial-gradient(circle 1000px at bottom right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%)`,
-        }}
-      />
+      {/* Wave SVG — visible only on lg+ screens */}
+      <svg
+        className="hidden lg:block absolute bottom-0 left-0 w-full h-[400px] z-10"
+        viewBox="0 0 1440 400"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,280 C400,240 1100,350 1440,150 L1440,400 L0,400 Z"
+          fill="black"
+        />
+        <path
+          d="M0,280 C400,240 1100,350 1440,150"
+          fill="none"
+          stroke="#9e2a31"
+          strokeWidth="6"
+        />
+      </svg>
 
-      {/* Corner image */}
-      <StaticImage
-        src="../assets/images/logos/north_endurance_white_red_small.png"
-        alt="North Endurance Logo"
-        className="absolute bottom-6 right-6 opacity-0 animate-fade-in z-30 w-[300px] md:w-[35%]"
-        style={{ position: "absolute" }}
-      />
+      {/* Logo block — only visible on lg+ screens */}
+      <div className="hidden lg:block absolute bottom-[25px] right-[40px] z-20 text-right">
+        <StaticImage
+          src="../assets/images/logos/north_endurance_white_red_small.png"
+          alt="North Endurance Logo"
+          className="w-[260px] h-auto mb-4"
+        />
+      </div>
     </section>
   )
 }

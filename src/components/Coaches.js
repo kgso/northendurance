@@ -12,7 +12,21 @@ const coachImageQuery = graphql`
         }
       }
     }
-    charles: file(relativePath: { eq: "coaches/charles.jpg" }) {
+    ryan: file(relativePath: { eq: "coaches/ryan.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, quality: 90) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    catherine: file(relativePath: { eq: "coaches/catherine.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, quality: 90) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    jess: file(relativePath: { eq: "coaches/jess.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 90) {
           ...GatsbyImageSharpFluid
@@ -37,89 +51,83 @@ const coachImageQuery = graphql`
 `
 
 const Coaches = () => {
-  const [activeCoach, setActiveCoach] = useState(null)
-
   return (
     <StaticQuery query={coachImageQuery}>
       {data => (
-        <section className="my-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {coaches.map((coach, idx) => {
-              const isActive = activeCoach === idx
-              const imageData = coach.imageKey && data[coach.imageKey]
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+              Meet Our Coaches
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              {coaches.map((coach, idx) => {
+                const imageData = coach.imageKey && data[coach.imageKey]
 
-              return (
-                <div
-                  key={idx}
-                  className="bg-white shadow-sm rounded-lg overflow-hidden transition-all duration-300"
-                >
-                  {!isActive ? (
-                    <div className="flex flex-col">
-                      {imageData && (
-                        <Img
-                          fluid={imageData.childImageSharp.fluid}
-                          alt={coach.name}
-                          className="w-full h-[450px] object-cover"
-                          imgStyle={{
-                            objectFit: "cover",
-                            objectPosition: "center top",
-                            width: "100%",
-                            height: "100%",
-                          }}
-                        />
+                return (
+                  <div
+                    key={idx}
+                    className="bg-white rounded-xl overflow-hidden shadow-md p-6 transform transition-all duration-300 hover:shadow-xl"
+                  >
+                    {imageData && (
+                      <Img
+                        fluid={imageData.childImageSharp.fluid}
+                        alt={coach.name}
+                        className="w-full h-80 object-cover rounded-lg"
+                        imgStyle={{
+                          objectFit: "cover",
+                          objectPosition: "center top",
+                        }}
+                      />
+                    )}
+                    <div className="mt-4">
+                      <p className="text-xl font-semibold text-gray-900 flex items-center gap-2">
+                        <span>{coach.name}</span>
+                        {coach.pronouns && (
+                          <span className="text-sm text-gray-500 font-normal">
+                            ({coach.pronouns})
+                          </span>
+                        )}
+                      </p>
+
+                      {coach.role && (
+                        <p className="text-sm text-gray-600 mt-1">
+                          {coach.role}
+                        </p>
                       )}
-                      <div className="p-6 text-black">
-                        <p className="text-xl font-bold">{coach.name}</p>
-                        {/* <p className="text-sm">
-                          <p className="text-sm">
-                            {Array.isArray(coach.role) ? coach.role.join(", ") : coach.role}
-                          </p>
-                        </p> */}
 
-                        {coach.trainings?.length > 0 && (
-                          <p className="text-sm text-gray-800 mt-3">
-                            <strong>Training:</strong>{" "}
-                            {coach.trainings.join(", ")}
-                          </p>
+                      {coach.trainings?.length > 0 && (
+                        <p className="text-sm text-gray-700 mt-3">
+                          <strong>Training:</strong>{" "}
+                          {coach.trainings.join(", ")}
+                        </p>
+                      )}
+
+                      <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-3">
+                        {coach.personalSite && (
+                          <a
+                            href={coach.personalSite}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-primary text-white text-sm font-semibold py-2 px-4 rounded-lg transition-opacity duration-300 ease-in-out text-center hover:opacity-80"
+                          >
+                            Website
+                          </a>
                         )}
 
-                        {coach.bio && (
-                          <button
-                            onClick={() => setActiveCoach(idx)}
-                            className="mt-4 inline-block bg-yellow-500 text-white text-sm font-medium py-1.5 px-4 rounded hover:bg-yellow-600 transition"
+                        {coach.email && (
+                          <a
+                            href={`mailto:${coach.email}`}
+                            className="bg-yellow-500 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-opacity duration-300 ease-in-out text-center hover:opacity-80"
                           >
-                            View Bio
-                          </button>
+                            Contact
+                          </a>
                         )}
                       </div>
                     </div>
-                  ) : (
-                    <div className="p-6 text-black animate-slide-up">
-                      <button
-                        onClick={() => setActiveCoach(null)}
-                        className="mb-4 text-sm text-blue-600 underline"
-                      >
-                        ← Back
-                      </button>
-                      <div
-                        className="text-sm text-gray-800 transition-opacity duration-300"
-                        dangerouslySetInnerHTML={{ __html: coach.bio }}
-                      />
-                      {coach.personalSite && (
-                        <a
-                          href={coach.personalSite}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block mt-4 text-blue-700 font-medium underline"
-                        >
-                          Visit Personal Training Website
-                        </a>
-                      )}
-                    </div>
-                  )}
-                </div>
-              )
-            })}
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </section>
       )}

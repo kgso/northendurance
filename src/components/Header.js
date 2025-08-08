@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
   const [tabletOpen, setTabletOpen] = useState(false)
@@ -34,12 +35,14 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white z-50 px-4 py-6 shadow">
-      <nav className="flex items-center justify-between">
-        {/* Mobile Hamburger */}
-        <div className="lg:hidden">
+      {/* Mobile Header */}
+      <nav className="relative flex items-center justify-between lg:hidden">
+        {/* Hamburger left */}
+        <div className="w-10 flex justify-start z-20">
           <button
             onClick={() => setTabletOpen(!tabletOpen)}
             className="p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
+            aria-label="Toggle navigation menu"
           >
             <svg
               className="h-6 w-6"
@@ -57,8 +60,33 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex space-x-8 text-base font-nav text-[#9f2a31]">
+        {/* Centered logo — absolutely centered */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          <StaticImage
+            src="../assets/images/logos/north_endurance_black_small.png"
+            alt="North Endurance Logo"
+            className="w-[150px] h-auto"
+            placeholder="blurred"
+            loading="eager"
+          />
+        </div>
+
+        {/* Sign Up Now button right */}
+        <div className="w-32 flex justify-end z-20">
+          <a
+            href="https://northendurance.sites.zenplanner.com/sign-up-now.cfm"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-4 py-2 rounded-xl bg-[rgb(159,42,49)] text-white font-bold text-xs uppercase tracking-wide shadow-md hover:bg-[rgb(130,30,36)] hover:text-[rgb(255,235,85)] hover:shadow-lg transition-all duration-300 ease-in-out whitespace-nowrap"
+          >
+            Sign Up Now!
+          </a>
+        </div>
+      </nav>
+
+      {/* Desktop Nav */}
+      <nav className="hidden lg:flex items-center justify-between">
+        <div className="flex space-x-8 text-base font-nav text-[#9f2a31]">
           {navGroups.map(group => (
             <div key={group.label} className="relative group">
               <button className="cursor-pointer text-[#9f2a31] hover:opacity-70">
@@ -92,7 +120,6 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Sign Up Now CTA replaces Logo */}
         <a
           href="https://northendurance.sites.zenplanner.com/sign-up-now.cfm"
           target="_blank"
@@ -103,7 +130,7 @@ const Header = () => {
         </a>
       </nav>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav dropdown */}
       {tabletOpen && (
         <div className="lg:hidden mt-4 bg-white rounded-md shadow-md ring-1 ring-gray-300">
           <nav className="px-4 py-4 space-y-4">
