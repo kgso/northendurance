@@ -1,9 +1,9 @@
 const coaches = [
   {
-    name: "ADAM NICHOLSON, CF-L2 Trainer",
+    name: "ADAM NICHOLSON",
     pronouns: "he/him",
     role:
-      "CrossFit Level 2 Trainer, CrossFit Gymnastics, CrossFit Weightlifting",
+      "CrossFit Level 2 Certificate, CrossFit Gymnastics, CrossFit Weightlifting",
     imageKey: "adam",
     trainings: [
       "Hyrox",
@@ -12,23 +12,28 @@ const coaches = [
       "Team Training",
       "Personal Training",
     ],
-    personalSite: "https://adamnicholsontraining.com",
-    email: "adam@example.com",
+    personalSite: "",
+    email: "adam@northendurance.ca",
   },
   {
-    name: "RYAN LEBRETON, CF-L1 Trainer",
+    name: "RYAN LEBRETON",
     pronouns: "he/him",
     role: "CrossFit Level 1 Certificate",
     imageKey: "ryan",
-    trainings: ["Hyrox", "Functionally F!t", "Personal Training"],
+    trainings: [
+      "Hyrox",
+      "Functionally F!t",
+      "Weightlifting",
+      "Team Training",
+      "Personal Training",
+    ],
     personalSite: "",
-    email: "ryan@example.com",
+    email: "ryan@northendurance.ca",
   },
   {
-    name: "CATHERINE HOEKSTRA, CF-L2 Trainer",
+    name: "CATHERINE HOEKSTRA",
     pronouns: "they/them",
-    role:
-      "CrossFit Level 2 Trainer, CrossFit Gymnastics, CrossFit Weightlifting",
+    role: "CrossFit Level 2 Certificate",
     imageKey: "catherine",
     trainings: [
       "Hyrox",
@@ -38,10 +43,10 @@ const coaches = [
       "Personal Training",
     ],
     personalSite: "",
-    email: "catherine@example.com",
+    email: "catherine@northendurance.ca",
   },
   {
-    name: "JESS PELLERINE, CF-L1 Trainer",
+    name: "JESS PELLERINE",
     pronouns: "she/her",
     role: "CrossFit Level 1 Certificate",
     imageKey: "jess",
@@ -49,7 +54,7 @@ const coaches = [
     personalSite: "",
   },
   {
-    name: "NICOLE ADDISON, CF-L1 Trainer",
+    name: "NICOLE ADDISON",
     pronouns: "she/her",
     role: "CrossFit Level 1 Certificate",
     imageKey: "nicole",
@@ -57,12 +62,12 @@ const coaches = [
     personalSite: "",
   },
   {
-    name: "SARAH MORASH, CF-L1 Trainer",
+    name: "SARAH MORASH",
     pronouns: "she/her",
     role: "CrossFit Level 1 Certificate",
     imageKey: "sarah",
     trainings: ["Hyrox", "Functionally F!t"],
-    personalSite: "https://sarahmorash.dev",
+    personalSite: "",
   },
 ]
 
