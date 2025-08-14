@@ -12,7 +12,7 @@ const Layout = () => {
 
       {/* Scrollable content area between header and sticky footer */}
       <div className="flex-grow overflow-y-auto">
-        <main>
+        <main id="top">
           <Content />
         </main>
       </div>

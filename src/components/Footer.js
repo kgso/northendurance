@@ -1,8 +1,30 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery } from "gatsby"
 import Social from "./Social"
 
 const Footer = () => {
+  // Query both images
+  const data = useStaticQuery(graphql`
+    query {
+      outLogo: file(relativePath: { eq: "logos/out-main+logo.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, height: 48, layout: FIXED)
+        }
+      }
+      hyroxLogo: file(
+        relativePath: { eq: "logos/HYROX_TC_Logo_primary_white.png" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, height: 61, layout: FIXED)
+        }
+      }
+    }
+  `)
+
+  const outLogoImage = getImage(data.outLogo)
+  const hyroxLogoImage = getImage(data.hyroxLogo)
+
   return (
     <footer className="footer bg-black text-white w-full">
       <div
@@ -30,6 +52,7 @@ const Footer = () => {
             </ul>
           </a>
         </div>
+
         {/* Weekday Hours */}
         <div className="flex flex-col items-center">
           <ul className="text-xs leading-tight sm:text-center md:text-left">
@@ -38,6 +61,7 @@ const Footer = () => {
             <li>& 5pm - 8:30pm</li>
           </ul>
         </div>
+
         {/* Weekend Hours */}
         <div className="flex flex-col items-center">
           <ul className="text-xs leading-tight">
@@ -45,18 +69,17 @@ const Footer = () => {
             <li>9am - 11:30am</li>
           </ul>
         </div>
+
         {/* OUT Foundation Image + Label */}
-        <div className="flex flex-col items-center h-[]">
+        <div className="flex flex-col items-center">
           <a
             href="https://outfoundation.org"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <StaticImage
-              src="../assets/images/logos/out-main+logo.png"
-              alt="Our Foundation"
-              placeholder="blurred"
-              height={48}
+            <GatsbyImage
+              image={outLogoImage}
+              alt="OUT Foundation"
               className="cursor-pointer"
             />
           </a>
@@ -64,18 +87,18 @@ const Footer = () => {
             Inclusive Gym
           </span>
         </div>
+
         {/* Hyrox Image */}
-        <div className="flex flex-col items-center max-h-[60px]">
+        <div className="flex flex-col items-center">
           <a href="#hyrox">
-            <StaticImage
-              src="../assets/images/logos/HYROX_TC_Logo_primary_white.png"
+            <GatsbyImage
+              image={hyroxLogoImage}
               alt="Hyrox Training"
-              placeholder="blurred"
-              height={60}
               className="cursor-pointer"
             />
           </a>
         </div>
+
         {/* Social Icons */}
         <div className="flex flex-col items-center">
           <Social className="gap-0" />

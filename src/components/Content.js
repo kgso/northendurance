@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Coaches from "./Coaches"
 import Schedule from "./Schedule"
@@ -8,12 +8,13 @@ import Hero from "./Hero"
 import LinkCTA from "./LinkCTA"
 
 const Content = () => {
+  const emailLink = "mailto:" + process.env.GATSBY_CONTACT_EMAIL
   const sections = [
     {
       id: "functionally-fit",
       title: "Functionally F!t",
       image: (
-        <StaticImage
+        <GatsbyImage
           src="../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_001.jpg"
           alt="Hyrox Training"
           placeholder="blurred"
@@ -55,7 +56,7 @@ const Content = () => {
       id: "functionally-fit-lite",
       title: "Functionally F!t L!te",
       image: (
-        <StaticImage
+        <GatsbyImage
           src="../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_057.jpg"
           alt="Hyrox Training"
           placeholder="blurred"
@@ -93,7 +94,7 @@ const Content = () => {
       id: "hyrox",
       title: "Hyrox",
       image: (
-        <StaticImage
+        <GatsbyImage
           src="../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_113.jpg"
           alt="Hyrox Training"
           placeholder="blurred"
@@ -122,7 +123,7 @@ const Content = () => {
               classes are for you. Offered Thursdays and Sundays, our Hyrox
               classes are a great way to further supplement your weekly workout
               routine or they will help you improve your functional strength and
-              cardiovascular health as a standalone exercise regiment.
+              cardiovascular health as a standalone exercise regimen.
             </b>
           </p>
         </>
@@ -132,7 +133,7 @@ const Content = () => {
       id: "weightlifting",
       title: "Weightlifting",
       image: (
-        <StaticImage
+        <GatsbyImage
           src="../assets/images/shots/promo_photos_part_2_north_endurance_photo_credit_stoometzphoto_229.jpg"
           alt="Hyrox Training"
           placeholder="blurred"
@@ -145,7 +146,7 @@ const Content = () => {
           <p>
             <b>
               We believe that strength training and weightlifting are critical
-              to a well-rounded fitness regiment. And that's why weightlifting
+              to a well-rounded fitness regimen. And that's why weightlifting
               and barbell strength training is regularly incorporated into our
               Functionally F!t classes.
             </b>{" "}
@@ -162,7 +163,7 @@ const Content = () => {
             social media to see when we'll be launching another one! Or if
             you're curious about how weightlifting and strength training is
             regularly a part of our Functionally F!t classes,{" "}
-            <LinkCTA href="#contact">reach out to us here</LinkCTA> and we'd be
+            <LinkCTA href={emailLink}>reach out to us here</LinkCTA> and we'd be
             happy to chat and share a sample of our programming with you.
           </p>
         </>
@@ -203,7 +204,7 @@ const Content = () => {
           </p>
           <p>
             For personal training package inquiries or to set up a no obligation
-            consult, <LinkCTA href="#contact">click here</LinkCTA>!
+            consult, <LinkCTA href={emailLink}>click here</LinkCTA>!
           </p>
         </>
       ),
@@ -248,7 +249,7 @@ const Content = () => {
           </p>
           <p>
             To arrange a tour, schedule a consult, or pricing inquiries{" "}
-            <LinkCTA href="#contact">click here</LinkCTA>!
+            <LinkCTA href={emailLink}>click here</LinkCTA>!
           </p>
         </>
       ),
