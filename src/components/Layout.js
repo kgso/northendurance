@@ -3,6 +3,7 @@ import React from "react"
 import Footer from "./Footer"
 import Header from "./Header"
 import Content from "./Content"
+import Hero from "./Hero"
 
 const Layout = () => {
   return (
@@ -13,6 +14,7 @@ const Layout = () => {
       {/* Scrollable content area between header and sticky footer */}
       <div className="flex-grow overflow-y-auto">
         <main id="top">
+          <Hero />
           <Content />
         </main>
       </div>

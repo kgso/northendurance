@@ -81,15 +81,21 @@ const Hero = () => {
 
   return (
     <section
-      className="w-full transition-opacity duration-500 ease-out h-[60vh] lg:h-[92vh] overflow-hidden"
+      className="w-full overflow-hidden transition-opacity duration-500 ease-out h-auto lg:[height:calc(100vh-207px)]"
       style={{ opacity }}
     >
       {selectedHeroImage && (
-        <GatsbyImage
-          image={selectedHeroImage}
-          alt="Hero Background"
-          className="w-full h-full object-cover object-center"
-        />
+        <div className="w-full h-full flex justify-center">
+          <GatsbyImage
+            image={selectedHeroImage}
+            alt="Hero Image"
+            className="w-full h-full lg:max-w-[1728px]" // stops growing past this width
+            style={{ height: "100%" }}
+            imgClassName="w-full h-full"
+            objectFit="cover"
+            objectPosition="center 50%" // adjust vertical crop
+          />
+        </div>
       )}
     </section>
   )

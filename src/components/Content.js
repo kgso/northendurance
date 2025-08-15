@@ -1,24 +1,80 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Coaches from "./Coaches"
 import Schedule from "./Schedule"
 import CTA from "./CTA"
-import Hero from "./Hero"
 import LinkCTA from "./LinkCTA"
 
 const Content = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      functionallyFit: file(
+        relativePath: {
+          eq: "shots/promo_photos_north_endurance_photo_credit_stoometzphoto_001.jpg"
+        }
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            placeholder: BLURRED
+            layout: CONSTRAINED
+            quality: 90
+          )
+        }
+      }
+      functionallyFitLite: file(
+        relativePath: {
+          eq: "shots/promo_photos_north_endurance_photo_credit_stoometzphoto_057.jpg"
+        }
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            placeholder: BLURRED
+            layout: CONSTRAINED
+            quality: 90
+          )
+        }
+      }
+      hyrox: file(
+        relativePath: {
+          eq: "shots/promo_photos_north_endurance_photo_credit_stoometzphoto_113.jpg"
+        }
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            placeholder: BLURRED
+            layout: CONSTRAINED
+            quality: 90
+          )
+        }
+      }
+      weightlifting: file(
+        relativePath: {
+          eq: "shots/promo_photos_part_2_north_endurance_photo_credit_stoometzphoto_229.jpg"
+        }
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            placeholder: BLURRED
+            layout: CONSTRAINED
+            quality: 90
+          )
+        }
+      }
+    }
+  `)
+
   const emailLink = "mailto:" + process.env.GATSBY_CONTACT_EMAIL
+
   const sections = [
     {
       id: "functionally-fit",
       title: "Functionally F!t",
       image: (
         <GatsbyImage
-          src="../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_001.jpg"
-          alt="Hyrox Training"
-          placeholder="blurred"
-          layout="constrained"
+          image={getImage(data.functionallyFit)}
+          alt="Functionally F!t"
           className="rounded shadow-md w-full h-auto"
         />
       ),
@@ -57,10 +113,8 @@ const Content = () => {
       title: "Functionally F!t L!te",
       image: (
         <GatsbyImage
-          src="../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_057.jpg"
-          alt="Hyrox Training"
-          placeholder="blurred"
-          layout="constrained"
+          image={getImage(data.functionallyFitLite)}
+          alt="Functionally F!t L!te"
           className="rounded shadow-md w-full h-auto"
         />
       ),
@@ -95,10 +149,8 @@ const Content = () => {
       title: "Hyrox",
       image: (
         <GatsbyImage
-          src="../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_113.jpg"
+          image={getImage(data.hyrox)}
           alt="Hyrox Training"
-          placeholder="blurred"
-          layout="constrained"
           className="rounded shadow-md w-full h-auto"
         />
       ),
@@ -134,10 +186,8 @@ const Content = () => {
       title: "Weightlifting",
       image: (
         <GatsbyImage
-          src="../assets/images/shots/promo_photos_part_2_north_endurance_photo_credit_stoometzphoto_229.jpg"
-          alt="Hyrox Training"
-          placeholder="blurred"
-          layout="constrained"
+          image={getImage(data.weightlifting)}
+          alt="Weightlifting"
           className="rounded shadow-md w-full h-auto"
         />
       ),
@@ -267,38 +317,15 @@ const Content = () => {
     {
       id: "contact",
       component: <CTA />,
-      wrapperClass: "max-w-3xl", // smaller container for contact
+      wrapperClass: "max-w-3xl",
     },
   ]
 
   return (
     <>
-      {/* Hero Section */}
-      <Hero />
-
-      {/* Dynamic Sections */}
       {sections.map((section, index) => {
         const isEven = index % 2 === 0
         const hasImage = !!section.image
-
-        const Content = (
-          <div
-            className={`text-gray-700 text-lg space-y-4 text-left w-full ${
-              hasImage ? "lg:w-1/2" : ""
-            }`}
-          >
-            {section.title && (
-              <h2 className="text-3xl font-semibold uppercase tracking-widest mb-4 text-center lg:text-left">
-                {section.title}
-              </h2>
-            )}
-            {section.component}
-          </div>
-        )
-
-        const Image = hasImage && (
-          <div className="w-full lg:w-1/2 mb-6 lg:mb-0">{section.image}</div>
-        )
 
         return (
           <section
@@ -309,14 +336,11 @@ const Content = () => {
             } scroll-mt-20`}
           >
             <div className={`${section.wrapperClass || "max-w-6xl"} mx-auto`}>
-              {/* Title always left aligned and above */}
               {section.title && (
                 <h2 className="text-3xl font-semibold uppercase tracking-widest mb-8 text-left">
                   {section.title}
                 </h2>
               )}
-
-              {/* Flex container for image and content */}
               <div
                 className={`flex flex-col lg:flex-row ${
                   hasImage ? "gap-8" : ""
