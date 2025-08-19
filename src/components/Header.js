@@ -14,13 +14,15 @@ const Header = () => {
         relativePath: { eq: "logos/north_endurance_black_small.png" }
       ) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+          gatsbyImageData(placeholder: NONE, layout: CONSTRAINED)
         }
       }
     }
   `)
 
   const logoImage = getImage(data.logo)
+  const signUpLink =
+    "https://northendurance.sites.zenplanner.com/sign-up-now.cfm"
 
   const navGroups = [
     {
@@ -52,11 +54,11 @@ const Header = () => {
           {/* Hamburger left */}
           <button
             onClick={() => setTabletOpen(!tabletOpen)}
-            className="p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
+            className="p-3 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
             aria-label="Toggle navigation menu"
           >
             <svg
-              className="h-6 w-6"
+              className="h-8 w-8" // bigger hamburger
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -75,18 +77,19 @@ const Header = () => {
             <GatsbyImage
               image={logoImage}
               alt="North Endurance Logo"
-              className="w-[150px] h-auto"
+              className="w-[180px] h-auto" // bigger logo
             />
           </a>
 
           {/* Sign Up right */}
           <a
-            href="https://northendurance.sites.zenplanner.com/sign-up-now.cfm"
+            href={signUpLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-4 py-2 rounded-xl bg-[rgb(159,42,49)] text-white font-bold text-xs uppercase tracking-wide shadow-md hover:bg-[rgb(130,30,36)] hover:text-[rgb(255,235,85)]"
+            className="flex flex-col items-center justify-center px-3 py-2 rounded-md font-bold text-xs uppercase tracking-wider bg-primary text-white hover:text-yellow-400 transition duration-300"
           >
-            Sign Up Now!
+            <span className="block">Sign Up</span>
+            <span className="block">Now!</span>
           </a>
         </nav>
 
@@ -95,7 +98,7 @@ const Header = () => {
           <div className="lg:hidden mt-4 space-y-6 border-t pt-4 font-nav text-base text-[#9f2a31]">
             {navGroups.map(group => (
               <div key={group.label}>
-                <p className="font-bold uppercase tracking-wide mb-2">
+                <p className="font-bold uppercase tracking-wide mb-2 text-gray-900">
                   {group.label}
                 </p>
                 <div className="space-y-2">

@@ -54,7 +54,7 @@ const Coaches = () => {
   return (
     <StaticQuery query={coachImageQuery}>
       {data => (
-        <section className="py-16">
+        <section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {coaches.map((coach, idx) => {
@@ -63,7 +63,7 @@ const Coaches = () => {
                 return (
                   <div
                     key={idx}
-                    className="bg-white rounded-xl overflow-hidden shadow-md p-6 transform transition-all duration-300 hover:shadow-xl"
+                    className="bg-white rounded-xl overflow-hidden shadow-md p-6"
                   >
                     {imageData && (
                       <Img
@@ -98,28 +98,6 @@ const Coaches = () => {
                           {coach.trainings.join(", ")}
                         </p>
                       )}
-
-                      <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-3">
-                        {coach.personalSite && (
-                          <a
-                            href={coach.personalSite}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-primary text-white text-sm font-semibold py-2 px-4 rounded-lg transition-opacity duration-300 ease-in-out text-center hover:opacity-80"
-                          >
-                            Website
-                          </a>
-                        )}
-
-                        {coach.email && (
-                          <a
-                            href={`mailto:${coach.email}`}
-                            className="bg-yellow-500 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-opacity duration-300 ease-in-out text-center hover:opacity-80"
-                          >
-                            Contact
-                          </a>
-                        )}
-                      </div>
                     </div>
                   </div>
                 )

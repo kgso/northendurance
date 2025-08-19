@@ -57,43 +57,24 @@ const Hero = () => {
   ]
 
   const [selectedHeroImage, setSelectedHeroImage] = useState(null)
-  const [opacity, setOpacity] = useState(1)
 
   useEffect(() => {
     const index = Math.floor(Math.random() * heroImages.length)
     setSelectedHeroImage(heroImages[index])
   }, [])
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY
-      const fadeStart = 0
-      const fadeEnd = 300
-
-      if (scrollTop <= fadeStart) setOpacity(1)
-      else if (scrollTop >= fadeEnd) setOpacity(0)
-      else setOpacity(1 - (scrollTop - fadeStart) / (fadeEnd - fadeStart))
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
   return (
-    <section
-      className="w-full overflow-hidden transition-opacity duration-500 ease-out h-auto lg:[height:calc(100vh-207px)]"
-      style={{ opacity }}
-    >
+    <section className="w-full overflow-hidden h-auto lg:[height:calc(100vh-207px)]">
       {selectedHeroImage && (
         <div className="w-full h-full flex justify-center">
           <GatsbyImage
             image={selectedHeroImage}
             alt="Hero Image"
-            className="w-full h-full lg:max-w-[1728px]" // stops growing past this width
+            className="w-full h-full lg:max-w-[1728px]"
             style={{ height: "100%" }}
             imgClassName="w-full h-full"
             objectFit="cover"
-            objectPosition="center 50%" // adjust vertical crop
+            objectPosition="center 50%"
           />
         </div>
       )}
