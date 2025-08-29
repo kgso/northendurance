@@ -69,7 +69,7 @@ const Hero = () => {
         <div className="w-full h-full flex justify-center">
           <GatsbyImage
             image={selectedHeroImage}
-            alt="Hero Image"
+            alt="North Endurance Class Photo (Photo © Stoo Metz)"
             className="w-full h-full lg:max-w-[1728px]"
             style={{ height: "100%" }}
             imgClassName="w-full h-full"

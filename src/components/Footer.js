@@ -4,19 +4,18 @@ import { graphql, useStaticQuery } from "gatsby"
 import Social from "./Social"
 
 const Footer = () => {
-  // Query both images
   const data = useStaticQuery(graphql`
     query {
       outLogo: file(relativePath: { eq: "logos/out-main+logo.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 48, layout: FIXED)
+          gatsbyImageData(placeholder: NONE, height: 48, layout: FIXED)
         }
       }
       hyroxLogo: file(
         relativePath: { eq: "logos/HYROX_TC_Logo_primary_white.png" }
       ) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 61, layout: FIXED)
+          gatsbyImageData(placeholder: NONE, height: 61, layout: FIXED)
         }
       }
     }

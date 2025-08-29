@@ -74,7 +74,7 @@ const Content = () => {
       image: (
         <GatsbyImage
           image={getImage(data.functionallyFit)}
-          alt="Functionally F!t"
+          alt="Functionally F!t program (Photo © Stoo Metz)"
           className="rounded shadow-md w-full h-auto"
         />
       ),
@@ -114,7 +114,7 @@ const Content = () => {
       image: (
         <GatsbyImage
           image={getImage(data.functionallyFitLite)}
-          alt="Functionally F!t L!te"
+          alt="Functionally F!t L!te program (Photo © Stoo Metz)"
           className="rounded shadow-md w-full h-auto"
         />
       ),
@@ -150,7 +150,7 @@ const Content = () => {
       image: (
         <GatsbyImage
           image={getImage(data.hyrox)}
-          alt="Hyrox Training"
+          alt="Hyrox Training program (Photo © Stoo Metz)"
           className="rounded shadow-md w-full h-auto"
         />
       ),
@@ -187,7 +187,7 @@ const Content = () => {
       image: (
         <GatsbyImage
           image={getImage(data.weightlifting)}
-          alt="Weightlifting"
+          alt="Weightlifting program (Photo © Stoo Metz)"
           className="rounded shadow-md w-full h-auto"
         />
       ),
@@ -352,13 +352,13 @@ const Content = () => {
                       <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
                         {section.image}
                       </div>
-                      <div className="text-gray-700 text-lg space-y-4 text-left w-full lg:w-1/2">
+                      <div className="text-lg space-y-4 text-left w-full lg:w-1/2">
                         {section.component}
                       </div>
                     </>
                   ) : (
                     <>
-                      <div className="text-gray-700 text-lg space-y-4 text-left w-full lg:w-1/2">
+                      <div className="text-lg space-y-4 text-left w-full lg:w-1/2">
                         {section.component}
                       </div>
                       <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
@@ -367,7 +367,7 @@ const Content = () => {
                     </>
                   )
                 ) : (
-                  <div className="text-gray-700 text-lg space-y-4 text-left w-full">
+                  <div className="text-lg space-y-4 text-left w-full">
                     {section.component}
                   </div>
                 )}
