@@ -37,11 +37,19 @@ const Header = () => {
       label: "Programs",
       items: [
         { label: "Functionally F!t", href: "#functionally-fit" },
-        { label: "Functionally F!t L!te", href: "#functionally-fit-lite" },
         { label: "Hyrox", href: "#hyrox" },
+        { label: "FF L!te", href: "#functionally-fit-lite" },
         { label: "Weightlifting", href: "#weightlifting" },
-        { label: "Personal Training", href: "#personal-training" },
-        { label: "Team Training", href: "#team-training" },
+        {
+          label: "Personal Training",
+          href: "#personal-training",
+          className: "text-black font-bold",
+        },
+        {
+          label: "Team Training",
+          href: "#team-training",
+          className: "text-black font-bold",
+        },
       ],
     },
   ]
@@ -95,10 +103,10 @@ const Header = () => {
 
         {/* Mobile Dropdown Menu */}
         {tabletOpen && (
-          <div className="lg:hidden mt-4 space-y-6 border-t pt-4 font-nav text-base text-[#9f2a31]">
+          <div className="lg:hidden mt-4 space-y-6 border-t pt-4 font-nav text-base">
             {navGroups.map(group => (
               <div key={group.label}>
-                <p className="font-bold uppercase tracking-wide mb-2 text-gray-900">
+                <p className="font-bold uppercase tracking-wide mb-2 text-[#9f2a31]">
                   {group.label}
                 </p>
                 <div className="space-y-2">
@@ -106,7 +114,9 @@ const Header = () => {
                     <a
                       key={item.label}
                       href={item.href}
-                      className="block px-2 py-1 hover:bg-gray-100 rounded"
+                      className={`block px-2 py-1 hover:bg-gray-100 rounded ${
+                        item.className ? item.className : "text-[#9f2a31]"
+                      }`}
                       onClick={() => setTabletOpen(false)}
                     >
                       {item.label}
@@ -121,10 +131,10 @@ const Header = () => {
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center justify-between">
           {/* Links left */}
-          <div className="flex space-x-8 text-base font-nav text-[#9f2a31]">
+          <div className="flex space-x-8 text-base font-nav">
             {navGroups.map(group => (
               <div key={group.label} className="relative group">
-                <button className="cursor-pointer hover:opacity-70">
+                <button className="cursor-pointer hover:opacity-70 text-[#9f2a31]">
                   {group.label}
                 </button>
                 {group.items.length > 1 && (
@@ -134,7 +144,9 @@ const Header = () => {
                         <a
                           key={item.label}
                           href={item.href}
-                          className="block px-4 py-2 text-sm hover:bg-gray-100"
+                          className={`block px-4 py-2 text-sm hover:bg-gray-100 ${
+                            item.className ? item.className : "text-[#9f2a31]"
+                          }`}
                         >
                           {item.label}
                         </a>

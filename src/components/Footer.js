@@ -56,8 +56,8 @@ const Footer = () => {
         <div className="flex flex-col items-center">
           <ul className="text-xs leading-tight sm:text-center md:text-left">
             <li>Mon - Fri</li>
-            <li>5:45am - 2:45pm</li>
-            <li>& 5pm - 8:30pm</li>
+            <li>5:45am - 2pm</li>
+            <li>& 5pm - 7:30pm</li>
           </ul>
         </div>
 
