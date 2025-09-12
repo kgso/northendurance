@@ -1,27 +1,28 @@
 import React from "react"
+
 import Footer from "./Footer"
 import Header from "./Header"
+import Content from "./Content"
+import Hero from "./Hero"
 
-const Layout = ({ children, moreSpace = false, background }) => {
+const Layout = () => {
   return (
-    <div
-      className="relative bg-white overflow-hidden"
-      style={{
-        backgroundImage: background ? `url(${background})` : "",
-        backgroundSize: "contain",
-        backgroundRepeat: "repeat",
-        backgroundPosition: "",
-      }}
-    >
+    <div className="relative bg-white overflow-hidden flex flex-col lg:h-screen">
+      {/* Fixed header */}
       <Header />
-      <main
-        className={`mx-auto ${
-          moreSpace ? "max-w-screen-2xl" : "max-w-7xl"
-        } px-4 sm:mt-6 sm:px-6 md:mt-8 lg:mt-10 lg:px-8 xl:mt-12`}
-      >
-        <div className="main">{children}</div>
-      </main>
-      <Footer></Footer>
+
+      {/* Scrollable content area between header and sticky footer */}
+      <div className="flex-grow overflow-y-auto">
+        <main id="top">
+          <Hero />
+          <Content />
+        </main>
+      </div>
+
+      {/* Sticky footer only on large screens */}
+      <div className="lg:sticky lg:bottom-0 lg:z-30">
+        <Footer />
+      </div>
     </div>
   )
 }

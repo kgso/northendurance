@@ -7,6 +7,13 @@ svg.icon:hover {
 }
 
 @font-face {
+  font-family: 'Rugen';
+  src: url("../assets/fonts/rugen.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: LogoFont;
   src: url("../assets/fonts/againts.ttf") format("truetype");
 }
@@ -23,4 +30,41 @@ svg.icon:hover {
 
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+.footer {
+  background-color: #000000;
+  font-family: Rugen;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out;
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

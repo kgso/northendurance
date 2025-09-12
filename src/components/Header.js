@@ -1,295 +1,203 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
-import logo from "../assets/images/logos/homeLogo.png"
-import zenplanner from "../assets/images/logos/zenplannerlogo.png"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Header = () => {
   const [tabletOpen, setTabletOpen] = useState(false)
 
+  const emailLink = "mailto:" + process.env.GATSBY_CONTACT_EMAIL
+
+  const data = useStaticQuery(graphql`
+    query {
+      logo: file(
+        relativePath: { eq: "logos/north_endurance_black_small.png" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(placeholder: NONE, layout: CONSTRAINED)
+        }
+      }
+    }
+  `)
+
+  const logoImage = getImage(data.logo)
+  const signUpLink =
+    "https://northendurance.sites.zenplanner.com/sign-up-now.cfm"
+  const zenplannerLink = "https://northendurance.sites.zenplanner.com/login.cfm"
+
+  const navGroups = [
+    {
+      label: "About",
+      items: [
+        { label: "Team", href: "#team" },
+        { label: "Schedule", href: "#schedule" },
+        { label: "Contact", href: emailLink },
+        { label: "Zenplanner", href: zenplannerLink },
+      ],
+    },
+    {
+      label: "Programs",
+      items: [
+        { label: "Functionally F!t", href: "#functionally-fit" },
+        { label: "Hyrox", href: "#hyrox" },
+        { label: "FF L!te", href: "#functionally-fit-lite" },
+        { label: "Weightlifting", href: "#weightlifting" },
+        {
+          label: "Personal Training",
+          href: "#personal-training",
+          className: "text-black font-bold",
+        },
+        {
+          label: "Team Training",
+          href: "#team-training",
+          className: "text-black font-bold",
+        },
+      ],
+    },
+  ]
+
+  // Helper function to check if link is external
+  const isExternal = href =>
+    href.startsWith("http") || href.startsWith("mailto:")
+
   return (
     <>
-      <div className="justify-between m-auto items-center px-4 py-6 bg-white z-10 py-3">
-        <nav
-          className="relative flex items-center justify-between sm:h-10"
-          aria-label="Global"
-        >
-          <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-            <div className="flex items-center justify-between w-full lg:w-auto">
-              <Link to="/">
-                <img
-                  className="h-8 w-auto"
-                  src={logo}
-                  alt="North Endurance Logo"
-                />
-              </Link>
-              <div className="-mr-2 flex items-center lg:hidden">
-                <button
-                  type="button"
-                  className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                  id="main-menu"
-                  aria-haspopup="true"
-                  onClick={() => setTabletOpen(!tabletOpen)}
-                >
-                  <span className="sr-only">Open main menu</span>
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="hidden lg:block lg:ml-10 lg:pr-4 lg:space-x-8 z-20">
-            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-small z-20">
-              About
-              <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-40 z-10 bg-white">
-                <a
-                  href="https://northendurance.sites.zenplanner.com/leaderboard-day.cfm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block">
-                    Today's WOD
-                  </span>
-                </a>
-                <Link
-                  to="/schedule"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
-                >
-                  Schedule
-                </Link>
-                <Link
-                  to="/team"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
-                >
-                  Meet Our Team
-                </Link>
-                <Link
-                  to="/inclusion"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
-                >
-                  Inclusion
-                </Link>
-              </div>
-            </li>
-            <Link
-              to="/group-fitness"
-              className="dropdown inline-block relative text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small z-20"
+      <header className="fixed top-0 left-0 w-full bg-white z-50 px-4 py-6 shadow">
+        {/* Mobile Header */}
+        <nav className="flex items-center justify-between lg:hidden">
+          {/* Hamburger left */}
+          <button
+            onClick={() => setTabletOpen(!tabletOpen)}
+            className="p-3 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
+            aria-label="Toggle navigation menu"
+          >
+            <svg
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              Group Fitness
-            </Link>
-            <Link
-              to="/lite-fitness"
-              className="dropdown inline-block relative text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small z-20"
-            >
-              Lite Fitness
-            </Link>
-            <Link
-              to="/personal-training"
-              className="dropdown inline-block relative text-grey-700 hover:text-gray-300 cursor-pointer font-bold text-base uppercase tracking-small z-20"
-            >
-              Personal Training
-            </Link>
-            <li className="dropdown inline-block relative text-grey-700 cursor-pointer font-bold text-base uppercase tracking-small z-20">
-              Contact
-              <div className="top-6 dropdown-menu absolute hidden h-auto flex flex-col pt-4 w-60 z-10 bg-white">
-                <Link
-                  to="/contact"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
-                >
-                  Contact Us
-                </Link>
-                <Link
-                  to="/support-local"
-                  className="font-medium text-gray-500 hover:text-gray-900 font-bold text-base uppercase tracking-small block"
-                >
-                  #SupportLocal
-                </Link>
-              </div>
-            </li>
-            <a
-              href="https://northendurance.sites.zenplanner.com/login.cfm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="z-50 relative"
-            >
-              <img
-                className="h-8 w-auto inline z-50"
-                src={zenplanner}
-                alt="ZenPlanner"
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
               />
-            </a>
-          </div>
+            </svg>
+          </button>
+
+          {/* Logo center */}
+          <a href="#top">
+            <GatsbyImage
+              image={logoImage}
+              alt="North Endurance Logo"
+              className="w-[180px] h-auto"
+            />
+          </a>
+
+          {/* Sign Up right */}
+          <a
+            href={signUpLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center px-3 py-2 rounded-md font-bold text-xs uppercase tracking-wider bg-primary text-white hover:text-yellow-400 transition duration-300"
+          >
+            <span className="block">Sign Up</span>
+            <span className="block">Now!</span>
+          </a>
         </nav>
+
+        {/* Mobile Dropdown Menu */}
         {tabletOpen && (
-          <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden z-10">
-            <div className="rounded-lg shadow-lg ring-1 ring-red-700 ring-opacity-5 bg-white divide-y-2">
-              <div className="pt-4 pl-2 pr-3 pb-3">
-                <div className="flex items-center justify-between">
-                  <Link to="/">
-                    <img
-                      className="h-8 w-auto"
-                      src={logo}
-                      alt="North Endurance Logo"
-                    />
-                  </Link>
-                  <div className="-mr-2">
-                    <button
-                      onClick={() => setTabletOpen(!tabletOpen)}
-                      type="button"
-                      className="bg-white rounded-md p-2 inline-flex items-center justify-center text-grey-400 hover:text-grey-500 hover:bg-grey-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-grey-500"
-                    >
-                      <span className="sr-only">Close menu</span>
-                      <svg
-                        className="h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <nav className="grid gap-y-2">
-                    {/* <a
-                      href="https://northendurance.sites.zenplanner.com/leaderboard-day.cfm"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                    >
-                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2">
-                        Today's WOD
-                      </span>
-                    </a> */}
-
-                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4">
-                      About
-                      <div className="top-4 h-auto flex flex-col pt-4">
-                        <a
-                          href="https://northendurance.sites.zenplanner.com/leaderboard-day.cfm"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2">
-                            Today's WOD
-                          </span>
-                        </a>
-                        <Link
-                          to="/schedule"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
-                            Schedule
-                          </span>
-                        </Link>
-                        {/* <Link
-                          to="/our-story"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
-                            Our Story
-                          </span>
-                        </Link> */}
-                        <Link
-                          to="/team"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
-                            Meet Our Team
-                          </span>
-                        </Link>
-                        <Link
-                          to="/inclusion"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
-                            Inclusion
-                          </span>
-                        </Link>
-                      </div>
-                    </li>
-
-                    <Link
-                      to="/group-fitness"
-                      className="-m-1 p-2 inline-block relative text-grey-700 hover:bg-gray-100 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4 z-10"
-                    >
-                      Group Fitness
-                    </Link>
-
-                    <Link
-                      to="/lite-fitness"
-                      className="-m-1 p-2 inline-block relative text-grey-700 hover:bg-gray-100 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4 z-10"
-                    >
-                      Lite Fitness
-                    </Link>
-
-                    <Link
-                      to="/personal-training"
-                      className="-m-1 p-2 inline-block relative text-grey-700 hover:bg-gray-100 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4 z-10"
-                    >
-                      Personal Training
-                    </Link>
-
-                    <li className="-m-1 p-2 inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-4">
-                      Contact
-                      <div className="top-4 h-auto flex flex-col pt-4">
-                        <Link
-                          to="/contact"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
-                            Contact Us
-                          </span>
-                        </Link>
-                        <Link
-                          to="/support-local"
-                          className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100"
-                        >
-                          <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2 py-1">
-                            #SupportLocal
-                          </span>
-                        </Link>
-                      </div>
-                    </li>
-
+          <div className="lg:hidden mt-4 space-y-6 border-t pt-4 font-nav text-base">
+            {navGroups.map(group => (
+              <div key={group.label}>
+                <p className="font-bold uppercase tracking-wide mb-2 text-[#9f2a31]">
+                  {group.label}
+                </p>
+                <div className="space-y-2">
+                  {group.items.map(item => (
                     <a
-                      href="https://northendurance.sites.zenplanner.com/login.cfm"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="-m-1 p-2 flex items-center rounded-md hover:bg-gray-100 z-20"
+                      key={item.label}
+                      href={item.href}
+                      {...(isExternal(item.href)
+                        ? {
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                          }
+                        : {})}
+                      className={`block px-2 py-1 hover:bg-gray-100 rounded ${
+                        item.className ? item.className : "text-[#9f2a31]"
+                      }`}
+                      onClick={() => setTabletOpen(false)}
                     >
-                      <span className="inline-block relative text-grey-700 hover:text-grey-100 cursor-pointer font-bold text-base uppercase tracking-small px-2">
-                        ZenPlanner
-                      </span>
+                      {item.label}
                     </a>
-                  </nav>
+                  ))}
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         )}
-      </div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex items-center justify-between">
+          {/* Links left */}
+          <div className="flex space-x-8 text-base font-nav">
+            {navGroups.map(group => (
+              <div key={group.label} className="relative group">
+                <button className="cursor-pointer hover:opacity-70 text-[#9f2a31]">
+                  {group.label}
+                </button>
+                {group.items.length > 1 && (
+                  <div className="absolute left-0 top-full w-max bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-30">
+                    <div className="pt-2">
+                      {group.items.map(item => (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          {...(isExternal(item.href)
+                            ? {
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                              }
+                            : {})}
+                          className={`block px-4 py-2 text-sm hover:bg-gray-100 ${
+                            item.className ? item.className : "text-[#9f2a31]"
+                          }`}
+                        >
+                          {item.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Logo center */}
+          <a href="#top">
+            <GatsbyImage
+              image={logoImage}
+              alt="North Endurance Logo"
+              className="w-[150px] h-auto"
+            />
+          </a>
+
+          {/* Sign Up right */}
+          <a
+            href={signUpLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 rounded-xl bg-[rgb(159,42,49)] text-white font-bold text-sm uppercase tracking-wide shadow-md hover:bg-[rgb(130,30,36)] hover:text-[rgb(255,235,85)]"
+          >
+            Sign Up Now!
+          </a>
+        </nav>
+      </header>
+
+      {/* Push page content below fixed header */}
+      <div className="pt-[96px]"></div>
     </>
   )
 }
