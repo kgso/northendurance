@@ -7,7 +7,6 @@ const Header = () => {
 
   const emailLink = "mailto:" + process.env.GATSBY_CONTACT_EMAIL
 
-  // Static query for the logo
   const data = useStaticQuery(graphql`
     query {
       logo: file(
@@ -23,6 +22,7 @@ const Header = () => {
   const logoImage = getImage(data.logo)
   const signUpLink =
     "https://northendurance.sites.zenplanner.com/sign-up-now.cfm"
+  const zenplannerLink = "https://northendurance.sites.zenplanner.com/login.cfm"
 
   const navGroups = [
     {
@@ -31,6 +31,7 @@ const Header = () => {
         { label: "Team", href: "#team" },
         { label: "Schedule", href: "#schedule" },
         { label: "Contact", href: emailLink },
+        { label: "Zenplanner", href: zenplannerLink },
       ],
     },
     {
@@ -54,6 +55,10 @@ const Header = () => {
     },
   ]
 
+  // Helper function to check if link is external
+  const isExternal = href =>
+    href.startsWith("http") || href.startsWith("mailto:")
+
   return (
     <>
       <header className="fixed top-0 left-0 w-full bg-white z-50 px-4 py-6 shadow">
@@ -66,7 +71,7 @@ const Header = () => {
             aria-label="Toggle navigation menu"
           >
             <svg
-              className="h-8 w-8" // bigger hamburger
+              className="h-8 w-8"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -85,7 +90,7 @@ const Header = () => {
             <GatsbyImage
               image={logoImage}
               alt="North Endurance Logo"
-              className="w-[180px] h-auto" // bigger logo
+              className="w-[180px] h-auto"
             />
           </a>
 
@@ -114,6 +119,12 @@ const Header = () => {
                     <a
                       key={item.label}
                       href={item.href}
+                      {...(isExternal(item.href)
+                        ? {
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                          }
+                        : {})}
                       className={`block px-2 py-1 hover:bg-gray-100 rounded ${
                         item.className ? item.className : "text-[#9f2a31]"
                       }`}
@@ -144,6 +155,12 @@ const Header = () => {
                         <a
                           key={item.label}
                           href={item.href}
+                          {...(isExternal(item.href)
+                            ? {
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                              }
+                            : {})}
                           className={`block px-4 py-2 text-sm hover:bg-gray-100 ${
                             item.className ? item.className : "text-[#9f2a31]"
                           }`}
@@ -169,7 +186,7 @@ const Header = () => {
 
           {/* Sign Up right */}
           <a
-            href="https://northendurance.sites.zenplanner.com/sign-up-now.cfm"
+            href={signUpLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 rounded-xl bg-[rgb(159,42,49)] text-white font-bold text-sm uppercase tracking-wide shadow-md hover:bg-[rgb(130,30,36)] hover:text-[rgb(255,235,85)]"

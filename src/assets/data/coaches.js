@@ -5,7 +5,7 @@ const coaches = [
     roles: ["CF Level 1", "Hyrox Foundations"],
     imageKey: "ry",
     trainings: ["Personal Training", "Functionally F!t", "Hyrox"],
-    email: "ry@northendurance.ca",
+    email: "ryan@northendurance.ca",
   },
   {
     name: "CATHERINE TAYLOR",
@@ -13,7 +13,7 @@ const coaches = [
     roles: ["CF Level 2", "Hyrox Foundations"],
     imageKey: "catherine",
     trainings: ["Personal Training", "Functionally F!t", "Hyrox"],
-    email: "catherine@northendurance.ca",
+    email: "rintaylorperformance@gmail.com",
   },
   {
     name: "ADAM NICHOLSON",
