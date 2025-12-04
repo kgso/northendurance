@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 
-import groupShot from "../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_223.jpg"
+import groupShot from "../assets/images/heros/promo_photos_north_endurance_photo_credit_stoometzphoto_223.jpg"
 
 const Seo = ({ title }) => {
   return (
