@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 
-import groupShot from "../assets/images/shots/group-shot-commons.jpg"
+import groupShot from "../assets/images/shots/promo_photos_north_endurance_photo_credit_stoometzphoto_223.jpg"
 
 const Seo = ({ title }) => {
   return (
@@ -17,11 +17,11 @@ const Seo = ({ title }) => {
       />
       <meta
         name="description"
-        content="Welcome to North Endurance, where we find strength in community. We specialize in group fitness, strength training, and personalized coaching, offering a supportive and energetic environment to help you reach your goals. Get started with us today!"
+        content="An open-armed group fitness gym located in Halifax's North End. We specialize in functional strength training and moderate to high intensity conditioning. Along with group classes, we offer personal training, team training, and open gym access."
       />
       <meta
         name="keywords"
-        content="North Endurance, Halifax, CrossFit, Gym, Fitness, Group Fitness, Strength Training, Personal Coaching, Community, Halifax CrossFit, North Endurance Halifax, CrossFit Kinetics"
+        content="North Endurance, Halifax, group fitness, functional strength training, conditioning, personal training, team training, open gym, inclusive gym, North End, fitness classes, Halifax gym, strength, community, HIIT, functional fitness, Halifax personal training, Halifax team training, Halifax open gym"
       />
       <meta
         property="og:url"
@@ -33,10 +33,13 @@ const Seo = ({ title }) => {
       <meta property="og:title" content={title} />
       <meta
         property="og:description"
-        content="Welcome to North Endurance, where we find strength in community. We specialize in group fitness, strength training, and personalized coaching, offering a supportive and energetic environment to help you reach your goals. Get started with us today!"
+        content="An open-armed group fitness gym located in Halifax's North End. We specialize in functional strength training and moderate to high intensity conditioning. Along with group classes, we offer personal training, team training, and open gym access."
       />
       <meta property="og:image" content={groupShot} />
+      <meta property="og:image:alt" content="North Endurance" />
       <meta property="og:site_name" content="North Endurance" />
+      <link rel="icon" href="/favicon.ico" />
+      <meta name="theme-color" content="#9f2a31" />
     </Helmet>
   )
 }
