@@ -10,7 +10,7 @@ const Layout = () => {
   return (
     <div className="relative bg-white overflow-hidden flex flex-col lg:h-screen">
       {/* SEO meta tags */}
-      <SEO title="North Endurance | Strength in Community" />
+      <SEO />
 
       {/* Fixed header */}
       <Header />

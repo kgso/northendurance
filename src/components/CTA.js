@@ -1,5 +1,4 @@
 import React from "react"
-import { formatPhone } from "../utils/Utils"
 
 const ContactCTA = () => {
   const phone = process.env.GATSBY_CONTACT_PHONE

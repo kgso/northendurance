@@ -1,15 +1,14 @@
 const colors = require("tailwindcss/colors")
 
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: false,
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      gray: colors.coolGray,
+      gray: colors.gray,
       red: colors.red,
-      blue: colors.lightBlue,
+      blue: colors.sky,
       yellow: colors.amber,
       white: colors.white,
       green: colors.green,

@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-const NotFound = ({ data }) => {
+const NotFound = () => {
   return (
     <Layout>
       <SEO title="Page Not Found | North Endurance" />
