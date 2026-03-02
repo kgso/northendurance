@@ -293,6 +293,12 @@ const Content = () => {
             life!
           </p>
           <p>
+            Each session is one hour in length and offered at a competitive
+            hourly team rate. Teams can book as many or as few sessions as
+            needed, whether supplementing in-season practices or committing to a
+            full off-season program.
+          </p>
+          <p>
             We believe that success in sport specific training starts with a
             respect for functional fitness! Let us help pave the way for your
             players' success with team strength and conditioning training!
