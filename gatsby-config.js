@@ -11,7 +11,6 @@ module.exports = {
     description: `An open-armed group fitness gym located in Halifax's North End. We specialize in functional strength training and moderate to high intensity conditioning. Along with group classes, we offer personal training, team training, and open gym access.`,
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-postcss",
     {

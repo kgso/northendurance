@@ -6,7 +6,6 @@ import SEO from "../components/SEO"
 const NotFound = () => {
   return (
     <Layout>
-      <SEO title="Page Not Found | North Endurance" />
       <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">
         Page Not Found
       </h1>
@@ -20,5 +19,9 @@ const NotFound = () => {
     </Layout>
   )
 }
+
+export const Head = ({ location }) => (
+  <SEO title="Page Not Found" pathname={location.pathname} noindex />
+)
 
 export default NotFound
